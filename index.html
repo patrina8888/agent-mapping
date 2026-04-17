@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Agent TAM Atlas · Software vs Labor Market · 2026-04</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
+<script src="./data.js"></script>
+<style>
+  :root {
+    --bg: #0b1020;
+    --bg2: #131a33;
+    --card: #161d3a;
+    --card2: #1c2548;
+    --border: #27305a;
+    --text: #e8ecff;
+    --muted: #9aa3cc;
+    --accent: #6ea8ff;
+    --accent2: #a78bfa;
+    --red: #ef4444;
+    --green: #22c55e;
+    --yellow: #eab308;
+    --blue: #3b82f6;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(1200px 600px at 10% -10%, #1b2356 0%, transparent 60%),
+                radial-gradient(900px 500px at 100% 0%, #2a1b4e 0%, transparent 60%),
+                var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 28px 28px 80px;
+  }
+  header.top {
+    margin-bottom: 26px;
+  }
+  header.top h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #a5b4fc 0%, #f0abfc 60%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  header.top p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 920px;
+  }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin: 22px 0 28px;
+  }
+  .kpi {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi .label {
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .kpi .value {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 6px;
+  }
+  .kpi .sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .kpi.red .value   { color: #fca5a5; }
+  .kpi.green .value { color: #86efac; }
+  .kpi.yellow .value{ color: #fde68a; }
+  .kpi.blue .value  { color: #93c5fd; }
+  .kpi.purple .value{ color: #c4b5fd; }
+
+  .filters {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1.4fr;
+    gap: 12px;
+    padding: 14px;
+    background: rgba(20, 26, 55, 0.72);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 22px;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .filters label {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .filters select, .filters input {
+    width: 100%;
+    background: #0e1430;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 9px 11px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color .15s;
+  }
+  .filters select:focus, .filters input:focus {
+    border-color: var(--accent);
+  }
+
+  .charts {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+  .card {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .card h3 {
+    margin: 0 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .card .desc {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .card .chart-box {
+    position: relative;
+    height: 320px;
+  }
+  .chart-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+  .chart-row-2 .card .chart-box { height: 260px; }
+
+  /* Table */
+  .table-card {
+    padding: 0;
+    overflow: hidden;
+  }
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .table-head h3 { margin: 0; font-size: 15px; }
+  .table-head .count { color: var(--muted); font-size: 12px; }
+  .table-wrap {
+    max-height: 720px;
+    overflow: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: #111735;
+    color: var(--muted);
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  thead th:hover { color: var(--text); }
+  thead th .arr { opacity: .4; margin-left: 4px; }
+  thead th.active .arr { opacity: 1; color: var(--accent); }
+  tbody tr {
+    border-bottom: 1px solid rgba(39, 48, 90, 0.55);
+    cursor: pointer;
+    transition: background-color .12s;
+  }
+  tbody tr:hover { background: rgba(110, 168, 255, 0.06); }
+  tbody td {
+    padding: 11px 12px;
+    vertical-align: top;
+  }
+  tbody td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tbody td .track {
+    font-weight: 600;
+    color: var(--text);
+  }
+  tbody td .cat-pill {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(110, 168, 255, 0.12);
+    color: #9ec0ff;
+    border: 1px solid rgba(110, 168, 255, 0.3);
+  }
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  .pill.red    { background: rgba(239, 68, 68, 0.12);  color: #fca5a5; border-color: rgba(239,68,68,.35); }
+  .pill.green  { background: rgba(34, 197, 94, 0.12);  color: #86efac; border-color: rgba(34,197,94,.35); }
+  .pill.yellow { background: rgba(234, 179, 8, 0.12);  color: #fde68a; border-color: rgba(234,179,8,.35); }
+
+  /* Expanded row */
+  tr.detail td {
+    background: #0e142f;
+    padding: 18px 24px 22px;
+  }
+  tr.detail .detail-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 18px;
+  }
+  tr.detail h4 {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  tr.detail p {
+    margin: 0 0 0;
+    color: #d6deff;
+    line-height: 1.65;
+    font-size: 13px;
+  }
+  tr.detail .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  tr.detail .tag {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(167, 139, 250, 0.14);
+    color: #d8c7ff;
+    border: 1px solid rgba(167, 139, 250, 0.35);
+  }
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  @media (max-width: 1120px) {
+    .kpis { grid-template-columns: repeat(3, 1fr); }
+    .filters { grid-template-columns: 1fr 1fr 1fr; }
+    .charts { grid-template-columns: 1fr; }
+    .chart-row-2 { grid-template-columns: 1fr; }
+    tr.detail .detail-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .filters { grid-template-columns: 1fr 1fr; }
+    header.top h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>AI Agent TAM Atlas · Software vs Labor Market (2026-Q2)</h1>
+    <p>
+      10 categories · 201 sub-tracks · Software TAM (AI product layer) vs Labor TAM
+      (human spend addressable by AI Agents), mapped across three AI impact types —
+      <b>Displacement / Expansion / Mixed</b> — cross-validated against Goldman Sachs,
+      McKinsey, WEF, GVR and MarketsandMarkets.
+      <span style="color:#fca5a5">🔴 Net Compression</span> = AI primarily substitutes labor, total spend declines.
+      <span style="color:#86efac">✅ Net Expansion</span> = AI creates new demand / democratizes access, total market grows.
+      <span style="color:#fde68a">🟡 Mixed</span> = both dynamics present.
+    </p>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="filters">
+    <div>
+      <label>Category</label>
+      <select id="f-category"><option value="">All categories</option></select>
+    </div>
+    <div>
+      <label>AI Impact</label>
+      <select id="f-impact"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Net Effect</label>
+      <select id="f-net"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Valuation Tier</label>
+      <select id="f-valuation"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Status</label>
+      <select id="f-status"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Search</label>
+      <input id="f-search" type="search" placeholder="Search sub-track / company / keyword…" />
+    </div>
+  </div>
+
+  <div class="charts">
+    <div class="card">
+      <h3>① TAM Totals by Category</h3>
+      <div class="desc">Aggregate Software TAM vs Labor TAM for every sub-track within each category. Labor TAM dwarfs Software TAM — exactly where AI Agents unlock expansion.</div>
+      <div class="chart-box"><canvas id="chart-category"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>② Software TAM × Labor TAM Scatter</h3>
+      <div class="desc">Log-log scale. Bubble size = displacement rate. Click any bubble to jump to that sub-track in the table below.</div>
+      <div class="chart-box"><canvas id="chart-scatter"></canvas></div>
+    </div>
+  </div>
+
+  <div class="chart-row-2">
+    <div class="card">
+      <h3>③ AI Impact Type Distribution</h3>
+      <div class="desc">Displacement / Expansion / Mixed — sub-track counts with aggregate Labor TAM on hover.</div>
+      <div class="chart-box"><canvas id="chart-impact"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>④ Valuation Tier Distribution</h3>
+      <div class="desc">Lead-company valuation tier for each sub-track: Sub-1B / Unicorn / Decacorn+.</div>
+      <div class="chart-box"><canvas id="chart-valuation"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card table-card">
+    <div class="table-head">
+      <h3>🔎 All Sub-Tracks — click any row to expand methodology, companies, funding & insights</h3>
+      <div class="count" id="row-count"></div>
+    </div>
+    <div class="table-wrap">
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th data-sort="num">#</th>
+            <th data-sort="category">Category</th>
+            <th data-sort="subTrack">Sub-Track</th>
+            <th data-sort="swTam">SW TAM</th>
+            <th data-sort="laborTam">Labor TAM</th>
+            <th data-sort="impactType">AI Impact</th>
+            <th data-sort="displacementRate">Disp. Rate</th>
+            <th data-sort="netEffect">Net Effect</th>
+            <th data-sort="laborSwRatio">Labor/SW</th>
+            <th data-sort="valuationTier">Valuation</th>
+            <th data-sort="publicStatus">Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    Data: AI_Agent_TAM_2026-04.xlsx (All Tracks — Labor vs SW TAM) · 201 sub-tracks · 10 categories · updated 2026-04
+  </div>
+</div>
+
+<script>
+/* ---------- Utilities ---------- */
+const DATA = window.TAM_DATA || [];
+const fmtB = v => v >= 1000 ? `$${(v/1000).toFixed(2)}T` : `$${v.toFixed(v >= 10 ? 0 : 1)}B`;
+const uniq = arr => Array.from(new Set(arr.filter(Boolean)));
+
+/* Color scheme */
+const IMPACT_COLOR = {
+  "🔴 Displacement": "#ef4444",
+  "✅ Expansion":    "#22c55e",
+  "🟡 Mixed":        "#eab308",
+};
+const NET_COLOR = {
+  "Net Compression 🔴": "#ef4444",
+  "Net Expansion ✅":   "#22c55e",
+};
+const CAT_COLORS = [
+  "#6366f1","#ec4899","#06b6d4","#f59e0b","#84cc16",
+  "#f43f5e","#8b5cf6","#14b8a6","#eab308","#3b82f6",
+];
+
+/* ---------- Populate filters ---------- */
+const CATS = uniq(DATA.map(d => d.categoryIcon + " " + d.category));
+const IMPACTS = uniq(DATA.map(d => d.impactType));
+const NETS = uniq(DATA.map(d => d.netEffect));
+const VALS = uniq(DATA.map(d => d.valuationTier));
+const STATUSES = uniq(DATA.map(d => d.publicStatus));
+
+function fillSelect(id, items) {
+  const sel = document.getElementById(id);
+  items.forEach(v => {
+    const o = document.createElement("option");
+    o.value = v;
+    o.textContent = v;
+    sel.appendChild(o);
+  });
+}
+fillSelect("f-category", CATS);
+fillSelect("f-impact", IMPACTS);
+fillSelect("f-net", NETS);
+fillSelect("f-valuation", VALS);
+fillSelect("f-status", STATUSES);
+
+/* ---------- State ---------- */
+const state = {
+  filters: { category: "", impact: "", net: "", valuation: "", status: "", search: "" },
+  sort: { key: "num", dir: "asc" },
+  expanded: new Set(),
+};
+
+function getFiltered() {
+  const f = state.filters;
+  const q = f.search.trim().toLowerCase();
+  return DATA.filter(d => {
+    if (f.category && (d.categoryIcon + " " + d.category) !== f.category) return false;
+    if (f.impact && d.impactType !== f.impact) return false;
+    if (f.net && d.netEffect !== f.net) return false;
+    if (f.valuation && d.valuationTier !== f.valuation) return false;
+    if (f.status && d.publicStatus !== f.status) return false;
+    if (q) {
+      const hay = (d.subTrack + " " + d.category + " " + d.description +
+                   " " + d.companies + " " + d.funding + " " + d.insights).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+/* ---------- KPI Cards ---------- */
+function renderKpis(list) {
+  const totalSw = list.reduce((s, d) => s + d.swTam, 0);
+  const totalLabor = list.reduce((s, d) => s + d.laborTam, 0);
+  const expCount = list.filter(d => d.netEffect.includes("Expansion")).length;
+  const comCount = list.filter(d => d.netEffect.includes("Compression")).length;
+  const avgRatio = list.length ? (list.reduce((s, d) => s + d.laborSwRatio, 0) / list.length) : 0;
+  const kpis = [
+    { label: "Sub-tracks", value: list.length, sub: `of ${DATA.length} total · current filter`, cls: "blue" },
+    { label: "Software TAM Total", value: fmtB(totalSw), sub: "AI product layer", cls: "purple" },
+    { label: "Labor TAM Total", value: fmtB(totalLabor), sub: "Addressable human spend", cls: "yellow" },
+    { label: "Avg Labor/SW Ratio", value: avgRatio.toFixed(1) + "×", sub: "TAM leverage", cls: "blue" },
+    { label: "✅ Net Expansion", value: expCount, sub: `${(expCount/(list.length||1)*100).toFixed(0)}% of tracks`, cls: "green" },
+    { label: "🔴 Net Compression", value: comCount, sub: `${(comCount/(list.length||1)*100).toFixed(0)}% of tracks`, cls: "red" },
+  ];
+  document.getElementById("kpis").innerHTML = kpis.map(k => `
+    <div class="kpi ${k.cls}">
+      <div class="label">${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="sub">${k.sub}</div>
+    </div>`).join("");
+}
+
+/* ---------- Charts ---------- */
+let chartCategory, chartScatter, chartImpact, chartValuation;
+
+function renderCharts(list) {
+  // 1) Stacked/grouped bar by category
+  const catMap = {};
+  list.forEach(d => {
+    const k = d.categoryIcon + " " + d.category;
+    if (!catMap[k]) catMap[k] = { sw: 0, labor: 0, n: 0 };
+    catMap[k].sw += d.swTam;
+    catMap[k].labor += d.laborTam;
+    catMap[k].n++;
+  });
+  const catLabels = Object.keys(catMap);
+  const swArr = catLabels.map(k => catMap[k].sw);
+  const laborArr = catLabels.map(k => catMap[k].labor);
+
+  if (chartCategory) chartCategory.destroy();
+  chartCategory = new Chart(document.getElementById("chart-category"), {
+    type: "bar",
+    data: {
+      labels: catLabels,
+      datasets: [
+        { label: "Software TAM ($B)", data: swArr,
+          backgroundColor: "#a78bfa", borderRadius: 6 },
+        { label: "Labor TAM ($B)", data: laborArr,
+          backgroundColor: "#fbbf24", borderRadius: 6 },
+      ],
+    },
+    options: {
+      indexAxis: "y",
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { type: "logarithmic", ticks: { color: "#9aa3cc",
+             callback: v => `$${v}B` }, grid: { color: "#27305a" } },
+        y: { ticks: { color: "#cfd6f7", font: { size: 11 } }, grid: { display: false } },
+      },
+      plugins: {
+        legend: { labels: { color: "#cfd6f7" } },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: ${fmtB(ctx.raw)}`,
+            afterBody: ctx => {
+              const c = catMap[ctx[0].label];
+              return [`Sub-tracks: ${c.n}`, `Labor/SW: ${(c.labor/(c.sw||1)).toFixed(1)}×`];
+            }
+          }
+        },
+      },
+    },
+  });
+
+  // 2) Scatter plot
+  const scatterData = {
+    datasets: Object.keys(IMPACT_COLOR).map(k => ({
+      label: k,
+      backgroundColor: IMPACT_COLOR[k] + "cc",
+      borderColor: IMPACT_COLOR[k],
+      data: list.filter(d => d.impactType === k).map(d => ({
+        x: d.swTam || 0.05,
+        y: d.laborTam || 0.05,
+        r: Math.max(4, Math.min(20, (d.displacementRate || 8) / 4)),
+        _row: d,
+      })),
+    }))
+  };
+
+  if (chartScatter) chartScatter.destroy();
+  chartScatter = new Chart(document.getElementById("chart-scatter"), {
+    type: "bubble",
+    data: scatterData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          type: "logarithmic",
+          title: { display: true, text: "Software TAM ($B, log scale)", color: "#9aa3cc" },
+          ticks: { color: "#9aa3cc", callback: v => `$${v}B` },
+          grid: { color: "#27305a" }
+        },
+        y: {
+          type: "logarithmic",
+          title: { display: true, text: "Labor TAM ($B, log scale)", color: "#9aa3cc" },
+          ticks: { color: "#9aa3cc", callback: v => `$${v}B` },
+          grid: { color: "#27305a" }
+        },
+      },
+      plugins: {
+        legend: { labels: { color: "#cfd6f7" } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const r = ctx.raw._row;
+              return [
+                `${r.subTrack}`,
+                `Category: ${r.categoryIcon} ${r.category}`,
+                `SW TAM: ${r.swTamStr}  ·  Labor TAM: ${r.laborTamStr}`,
+                `Displacement: ${r.displacementRateStr}  ·  ${r.netEffect}`,
+              ];
+            }
+          }
+        },
+      },
+      onClick: (e, els) => {
+        if (!els.length) return;
+        const p = els[0];
+        const row = chartScatter.data.datasets[p.datasetIndex].data[p.index]._row;
+        // scroll to row and open it
+        openRow(row.id, true);
+      }
+    },
+  });
+
+  // 3) Donut — impact type (count)
+  const impactCounts = {};
+  list.forEach(d => { impactCounts[d.impactType] = (impactCounts[d.impactType]||0) + 1; });
+  const impactLabels = Object.keys(impactCounts);
+
+  if (chartImpact) chartImpact.destroy();
+  chartImpact = new Chart(document.getElementById("chart-impact"), {
+    type: "doughnut",
+    data: {
+      labels: impactLabels,
+      datasets: [{
+        data: impactLabels.map(k => impactCounts[k]),
+        backgroundColor: impactLabels.map(k => IMPACT_COLOR[k] || "#888"),
+        borderColor: "#0b1020",
+        borderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: "62%",
+      plugins: {
+        legend: { position: "right", labels: { color: "#cfd6f7", boxWidth: 14 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const labor = list.filter(d => d.impactType === ctx.label)
+                                .reduce((s,d) => s + d.laborTam, 0);
+              return `${ctx.label}: ${ctx.raw} tracks · Labor TAM ${fmtB(labor)}`;
+            }
+          }
+        },
+      },
+    },
+  });
+
+  // 4) Donut — valuation tier
+  const valCounts = {};
+  list.forEach(d => { valCounts[d.valuationTier] = (valCounts[d.valuationTier]||0) + 1; });
+  const valLabels = Object.keys(valCounts);
+  const VAL_COLORS = {
+    "⚪ Sub-1B": "#94a3b8",
+    "🟢 Unicorn": "#22c55e",
+    "🟡 Deca+": "#eab308",
+  };
+
+  if (chartValuation) chartValuation.destroy();
+  chartValuation = new Chart(document.getElementById("chart-valuation"), {
+    type: "doughnut",
+    data: {
+      labels: valLabels,
+      datasets: [{
+        data: valLabels.map(k => valCounts[k]),
+        backgroundColor: valLabels.map(k => VAL_COLORS[k] || "#a78bfa"),
+        borderColor: "#0b1020",
+        borderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: "62%",
+      plugins: {
+        legend: { position: "right", labels: { color: "#cfd6f7", boxWidth: 14 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.label}: ${ctx.raw} tracks`
+          }
+        },
+      },
+    },
+  });
+}
+
+/* ---------- Table ---------- */
+function impactPillClass(t) {
+  if (t.includes("Displacement")) return "red";
+  if (t.includes("Expansion")) return "green";
+  if (t.includes("Mixed")) return "yellow";
+  return "";
+}
+function netPillClass(t) {
+  if (t.includes("Compression")) return "red";
+  if (t.includes("Expansion")) return "green";
+  return "yellow";
+}
+function sortList(list) {
+  const { key, dir } = state.sort;
+  const factor = dir === "asc" ? 1 : -1;
+  return [...list].sort((a, b) => {
+    let va = a[key], vb = b[key];
+    if (typeof va === "string") { va = va.toLowerCase(); vb = (vb||"").toLowerCase(); }
+    if (va < vb) return -1 * factor;
+    if (va > vb) return  1 * factor;
+    return 0;
+  });
+}
+
+function splitList(s) {
+  if (!s) return [];
+  return s.split(/;|,/).map(x => x.trim()).filter(Boolean);
+}
+
+function renderTable(list) {
+  const sorted = sortList(list);
+  const tbody = document.getElementById("tbody");
+  const rows = [];
+  sorted.forEach(d => {
+    const isOpen = state.expanded.has(d.id);
+    rows.push(`
+      <tr data-id="${d.id}">
+        <td class="num">${d.num}</td>
+        <td><span class="cat-pill">${d.categoryIcon} ${d.category}</span></td>
+        <td><div class="track">${escapeHtml(d.subTrack)}</div></td>
+        <td class="num">${d.swTamStr}</td>
+        <td class="num">${d.laborTamStr}</td>
+        <td><span class="pill ${impactPillClass(d.impactType)}">${d.impactType}</span></td>
+        <td class="num">${d.displacementRateStr}</td>
+        <td><span class="pill ${netPillClass(d.netEffect)}">${d.netEffect}</span></td>
+        <td class="num">${d.laborSwRatioStr}</td>
+        <td>${d.valuationTier}</td>
+        <td>${d.publicStatus}</td>
+      </tr>
+    `);
+    if (isOpen) {
+      const companies = splitList(d.companies);
+      rows.push(`
+        <tr class="detail" data-detail="${d.id}"><td colspan="11">
+          <div class="detail-grid">
+            <div>
+              <h4>📊 TAM Methodology & Description</h4>
+              <p>${escapeHtml(d.description)}</p>
+            </div>
+            <div>
+              <h4>🏢 Representative Companies</h4>
+              <div class="tags">
+                ${companies.map(c => `<span class="tag">${escapeHtml(c)}</span>`).join("") || '<span class="tag">—</span>'}
+              </div>
+              <h4 style="margin-top:14px">💰 Funding / Valuation</h4>
+              <p>${escapeHtml(d.funding) || "—"}</p>
+            </div>
+            <div>
+              <h4>💡 Investment Insight</h4>
+              <p>${escapeHtml(d.insights) || "—"}</p>
+              <h4 style="margin-top:14px">🏷️ Tags</h4>
+              <div class="tags">
+                <span class="tag">${d.valuationTier}</span>
+                <span class="tag">${d.publicStatus}</span>
+                <span class="tag">Labor/SW ${d.laborSwRatioStr}</span>
+              </div>
+            </div>
+          </div>
+        </td></tr>
+      `);
+    }
+  });
+  tbody.innerHTML = rows.join("");
+
+  // header active arrows
+  document.querySelectorAll("thead th").forEach(th => {
+    th.classList.toggle("active", th.dataset.sort === state.sort.key);
+    const arr = th.querySelector(".arr");
+    if (arr) arr.remove();
+    const span = document.createElement("span");
+    span.className = "arr";
+    span.textContent = th.dataset.sort === state.sort.key
+      ? (state.sort.dir === "asc" ? "▲" : "▼")
+      : "↕";
+    th.appendChild(span);
+  });
+
+  document.getElementById("row-count").textContent =
+    `${list.length} sub-tracks  ·  of ${DATA.length} total`;
+}
+
+function escapeHtml(s) {
+  return (s || "").replace(/[&<>"']/g,
+    c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+function openRow(id, scroll) {
+  if (!state.expanded.has(id)) state.expanded.add(id);
+  renderAll();
+  if (scroll) {
+    const el = document.querySelector(`tr[data-id="${id}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+function renderAll() {
+  const list = getFiltered();
+  renderKpis(list);
+  renderCharts(list);
+  renderTable(list);
+}
+
+/* ---------- Event wiring ---------- */
+["f-category","f-impact","f-net","f-valuation","f-status"].forEach(id => {
+  document.getElementById(id).addEventListener("change", e => {
+    const key = id.replace("f-","");
+    state.filters[key === "net" ? "net" : key] = e.target.value;
+    renderAll();
+  });
+});
+document.getElementById("f-search").addEventListener("input", e => {
+  state.filters.search = e.target.value;
+  renderAll();
+});
+
+document.querySelectorAll("thead th").forEach(th => {
+  th.addEventListener("click", () => {
+    const k = th.dataset.sort;
+    if (state.sort.key === k) {
+      state.sort.dir = state.sort.dir === "asc" ? "desc" : "asc";
+    } else {
+      state.sort.key = k;
+      state.sort.dir = ["swTam","laborTam","displacementRate","laborSwRatio","num"].includes(k) ? "desc" : "asc";
+    }
+    renderTable(getFiltered());
+  });
+});
+
+document.getElementById("tbody").addEventListener("click", e => {
+  const tr = e.target.closest("tr[data-id]");
+  if (!tr) return;
+  const id = Number(tr.dataset.id);
+  if (state.expanded.has(id)) state.expanded.delete(id);
+  else state.expanded.add(id);
+  renderTable(getFiltered());
+});
+
+/* ---------- Boot ---------- */
+renderAll();
+</script>
+</body>
+</html>
