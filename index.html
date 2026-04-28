@@ -7,6 +7,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
 <script src="./data.js"></script>
+<script src="./update.js"></script>
 <style>
   :root {
     --bg: #0b1020;
@@ -291,6 +292,125 @@
     font-size: 12px;
   }
 
+  /* Updates section */
+  .updates {
+    background: linear-gradient(135deg, rgba(110,168,255,0.12) 0%, rgba(167,139,250,0.10) 100%);
+    border: 1px solid rgba(110,168,255,0.32);
+    border-radius: var(--radius);
+    margin-bottom: 22px;
+    overflow: hidden;
+  }
+  .updates-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .updates-bar:hover { background: rgba(110,168,255,0.06); }
+  .updates-bar .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,#6ea8ff,#a78bfa);
+    color: #0b1020;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .updates-bar .summary {
+    flex: 1;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .updates-bar .summary b { color: #c4b5fd; }
+  .updates-bar .summary .delta-up { color: #86efac; font-variant-numeric: tabular-nums; }
+  .updates-bar .summary .delta-down { color: #fca5a5; font-variant-numeric: tabular-nums; }
+  .updates-bar .toggle {
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .updates-bar .toggle .arrow { display: inline-block; transition: transform .2s; }
+  .updates.open .updates-bar .toggle .arrow { transform: rotate(180deg); }
+  .updates-body {
+    display: none;
+    padding: 4px 18px 20px;
+    border-top: 1px solid rgba(110,168,255,0.22);
+  }
+  .updates.open .updates-body { display: block; }
+  .updates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .update-block {
+    background: rgba(11,16,32,0.45);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .update-block h4 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .update-block.tam h4 { color: #c4b5fd; }
+  .update-block.displacement h4 { color: #fca5a5; }
+  .update-block.capability h4 { color: #93c5fd; }
+  .update-block.players h4 { color: #fde68a; }
+  .update-block h4 .count {
+    font-size: 11px;
+    background: rgba(110,168,255,0.14);
+    border: 1px solid rgba(110,168,255,0.3);
+    color: #cfd6f7;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .update-block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .update-block li {
+    padding: 7px 0;
+    border-bottom: 1px dashed rgba(39,48,90,0.5);
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #d6deff;
+  }
+  .update-block li:last-child { border-bottom: none; }
+  .update-block li .track-name {
+    color: var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .update-block li .track-name:hover { text-decoration: underline; }
+  .update-block li .desc { color: #b8c0e8; }
+  .update-block li .src {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .update-source {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(39,48,90,0.5);
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+  }
+
   @media (max-width: 1120px) {
     .kpis { grid-template-columns: repeat(3, 1fr); }
     .filters { grid-template-columns: 1fr 1fr 1fr; }
@@ -319,6 +439,8 @@
       <span style="color:#fde68a">🟡 Mixed</span> = both dynamics present.
     </p>
   </header>
+
+  <section class="updates" id="updates"></section>
 
   <div class="kpis" id="kpis"></div>
 
@@ -403,7 +525,7 @@
   </div>
 
   <div class="footer">
-    Data: AI_Agent_TAM_2026-04.xlsx (All Tracks — Labor vs SW TAM) · 201 sub-tracks · 10 categories · updated 2026-04
+    Data: AI_Agent_TAM_2026-04.xlsx (All Tracks — Labor vs SW TAM) · 201 sub-tracks · 10 categories · updated 2026-04 · framework total $496B SW / $9.60T Labor
   </div>
 </div>
 
@@ -840,8 +962,103 @@ document.getElementById("tbody").addEventListener("click", e => {
   renderTable(getFiltered());
 });
 
+/* ---------- Updates section ---------- */
+function renderUpdates() {
+  const upd = window.TAM_UPDATE;
+  const root = document.getElementById("updates");
+  if (!upd || !upd.entries || !upd.entries.length) { root.style.display = "none"; return; }
+
+  const summary = upd.entries.find(e => e.type === "summary");
+  const byType = { tam: [], displacement: [], capability: [], players: [] };
+  upd.entries.forEach(e => { if (byType[e.type]) byType[e.type].push(e); });
+
+  const titles = {
+    tam: "💰 TAM Revisions",
+    displacement: "🤖 Displacement Updates",
+    capability: "⚡ Capability Unlocks",
+    players: "🚀 Key Players & Funding",
+  };
+
+  const period = upd.period || "Latest";
+  const t = upd.framework && upd.framework.totals ? upd.framework.totals : {};
+  const summaryLine = summary
+    ? escapeHtml(summary.description)
+    : `Total SW TAM <b>${fmtB(t.swTamB||0)}</b> · Labor TAM <b>${fmtB(t.laborTamB||0)}</b> · ${t.tracks||0} tracks`;
+
+  // Highlight numeric deltas in green/red
+  const deltaHl = s => s
+    .replace(/(\+\$?[\d.]+[BTM]?)/g, '<span class="delta-up">$1</span>')
+    .replace(/(\-\$?[\d.]+[BTM]?)/g, '<span class="delta-down">$1</span>')
+    .replace(/(\+\d+%)/g, '<span class="delta-up">$1</span>')
+    .replace(/(\-\d+%)/g, '<span class="delta-down">$1</span>');
+
+  function renderEntry(e) {
+    const trackText = e.tracks || e.category || "—";
+    return `
+      <li>
+        <span class="track-name" data-track="${escapeHtml(trackText)}">${escapeHtml(trackText)}</span>
+        <span class="desc"> — ${deltaHl(escapeHtml(e.description))}</span>
+        ${e.source ? `<span class="src">↳ ${escapeHtml(e.source)}${e.confidence ? ` · ${escapeHtml(e.confidence)} confidence` : ""}</span>` : ""}
+      </li>`;
+  }
+
+  function renderBlock(typeKey) {
+    const list = byType[typeKey];
+    if (!list.length) return "";
+    return `
+      <div class="update-block ${typeKey}">
+        <h4>${titles[typeKey]}<span class="count">${list.length}</span></h4>
+        <ul>${list.map(renderEntry).join("")}</ul>
+      </div>`;
+  }
+
+  const totalCount = Object.values(byType).reduce((s,a) => s + a.length, 0);
+
+  root.innerHTML = `
+    <div class="updates-bar" id="updates-toggle">
+      <span class="badge">📅 ${escapeHtml(period)} Update</span>
+      <span class="summary">${deltaHl(summaryLine)}</span>
+      <span class="toggle"><span class="count-pill">${totalCount} changes</span> <span class="arrow">▼</span></span>
+    </div>
+    <div class="updates-body">
+      <div class="updates-grid">
+        ${renderBlock("tam")}
+        ${renderBlock("displacement")}
+        ${renderBlock("capability")}
+        ${renderBlock("players")}
+      </div>
+      <div class="update-source">
+        Source: AI_Agent_TAM_${escapeHtml(period)}.xlsx · Change Log sheet · ${upd.entries.filter(e => e.type !== "baseline" && e.type !== "summary").length} discrete updates
+      </div>
+    </div>`;
+
+  document.getElementById("updates-toggle").addEventListener("click", () => {
+    root.classList.toggle("open");
+  });
+
+  // Track-name click → search in table
+  root.querySelectorAll(".track-name").forEach(el => {
+    el.addEventListener("click", ev => {
+      ev.stopPropagation();
+      const txt = el.dataset.track;
+      // Pick first parenthetical track name (e.g., "Code Generation Agent (#48)")
+      const m = txt.match(/^([^(#]+?)(?:\s*\(|\s*#|$)/);
+      const search = (m ? m[1] : txt).trim();
+      const input = document.getElementById("f-search");
+      input.value = search;
+      state.filters.search = search;
+      renderAll();
+      document.getElementById("data-table").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  // Default open on first load
+  root.classList.add("open");
+}
+
 /* ---------- Boot ---------- */
 renderAll();
+renderUpdates();
 </script>
 </body>
 </html>

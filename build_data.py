@@ -7,7 +7,9 @@ import os
 
 SRC_PATH = "/Users/patrinafan/Downloads/AI_Agent_TAM_2026-04 (1).xlsx"
 SHEET = "All Tracks — Labor vs SW TAM"
+CHANGELOG_SHEET = "Change Log"
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.js")
+UPDATE_OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "update.js")
 
 CIRCLED = "①②③④⑤⑥⑦⑧⑨⑩"
 
@@ -129,3 +131,81 @@ with open(OUT_PATH, "w", encoding="utf-8") as f:
     f.write(";\n")
 
 print(f"Wrote {OUT_PATH}")
+
+# ---------- Change Log extraction ----------
+TYPE_LABEL = {
+    "Type 2: TAM": "tam",
+    "Type 3: Displacement": "displacement",
+    "Type 4: Capability": "capability",
+    "Type 5: Players": "players",
+    "SUMMARY": "summary",
+    "BASELINE": "baseline",
+}
+
+def parse_changelog(ws):
+    entries = []
+    period = None
+    header_row_idx = None
+    rows_raw = list(ws.iter_rows(values_only=True))
+    for i, row in enumerate(rows_raw):
+        cells = ["" if v is None else str(v).strip() for v in row]
+        if cells and cells[0] == "Update Date":
+            header_row_idx = i
+            break
+    if header_row_idx is None:
+        return {"period": None, "entries": []}
+    for row in rows_raw[header_row_idx + 1:]:
+        cells = ["" if v is None else str(v).strip() for v in row]
+        if not any(cells):
+            continue
+        date, utype, cat, tracks, desc, source, conf = (cells + [""] * 7)[:7]
+        if not date or date.lower().startswith("legend"):
+            continue
+        if utype in ("Type 2: TAM", "Type 3: Displacement", "Type 4: Capability",
+                     "Type 5: Players", "SUMMARY", "BASELINE"):
+            entries.append({
+                "date": date,
+                "type": TYPE_LABEL.get(utype, utype),
+                "typeLabel": utype,
+                "category": cat,
+                "tracks": tracks,
+                "description": desc,
+                "source": source,
+                "confidence": conf,
+            })
+            if utype != "BASELINE":
+                period = date
+    return {"period": period, "entries": entries}
+
+cl_ws = wb[CHANGELOG_SHEET]
+changelog = parse_changelog(cl_ws)
+
+# Aggregate framework totals
+total_sw_b = round(total_sw, 1)
+total_labor_b = round(total_labor, 1)
+avg_ratio = round(total_labor / total_sw, 1) if total_sw else 0
+
+framework = {
+    "period": changelog["period"],
+    "totals": {
+        "swTamB": total_sw_b,
+        "laborTamB": total_labor_b,
+        "ratio": avg_ratio,
+        "tracks": len(rows),
+        "categories": len({r["category"] for r in rows}),
+    },
+}
+
+update_payload = {
+    "period": changelog["period"],
+    "framework": framework,
+    "entries": changelog["entries"],
+}
+
+with open(UPDATE_OUT_PATH, "w", encoding="utf-8") as f:
+    f.write("// Auto-generated from AI_Agent_TAM.xlsx - Change Log sheet\n")
+    f.write("window.TAM_UPDATE = ")
+    f.write(json.dumps(update_payload, ensure_ascii=False, indent=1))
+    f.write(";\n")
+
+print(f"Wrote {UPDATE_OUT_PATH} ({len(changelog['entries'])} change entries, period={changelog['period']})")
