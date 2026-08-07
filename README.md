@@ -34,8 +34,12 @@ The site is pure static HTML/JS, so Vercel serves it with no build step.
 ## Refreshing the data
 
 1. Replace the source .xlsx (see `SRC_PATH` at the top of `build_data.py`)
-2. `python3 build_data.py`  → regenerates `data.js`
-3. Commit & push — Vercel auto-redeploys
+2. `python3 build_data.py`  → regenerates `data.js` + `update.js`
+3. Commit & push to GitHub `main` (source of record)
+4. **Deploy is NOT automatic** — run `npx vercel@latest --prod --yes` from this dir to
+   publish to `agent-mapping.vercel.app` (project: `hat-trick-capital/agent-mapping`).
+   The GitHub↔Vercel git integration is not wired up, so a git push alone does **not**
+   trigger a build.
 
 ## Methodology
 
