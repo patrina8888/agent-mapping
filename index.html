@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Agent TAM Atlas · Software vs Labor Market · 2026-04</title>
+<title>AI Agent TAM Atlas · Software vs Labor Market · 2026-08</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
 <script src="./data.js"></script>
@@ -363,6 +363,7 @@
     justify-content: space-between;
     align-items: center;
   }
+  .update-block.newtrack h4 { color: #6ee7b7; }
   .update-block.tam h4 { color: #c4b5fd; }
   .update-block.displacement h4 { color: #fca5a5; }
   .update-block.capability h4 { color: #93c5fd; }
@@ -428,9 +429,9 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <h1>AI Agent TAM Atlas · Software vs Labor Market (2026-Q2)</h1>
+    <h1>AI Agent TAM Atlas · Software vs Labor Market (2026-Q3)</h1>
     <p>
-      10 categories · 201 sub-tracks · Software TAM (AI product layer) vs Labor TAM
+      10 categories · 205 sub-tracks · Software TAM (AI product layer) vs Labor TAM
       (human spend addressable by AI Agents), mapped across three AI impact types —
       <b>Displacement / Expansion / Mixed</b> — cross-validated against Goldman Sachs,
       McKinsey, WEF, GVR and MarketsandMarkets.
@@ -525,7 +526,7 @@
   </div>
 
   <div class="footer">
-    Data: AI_Agent_TAM_2026-04.xlsx (All Tracks — Labor vs SW TAM) · 201 sub-tracks · 10 categories · updated 2026-04 · framework total $496B SW / $9.60T Labor
+    Data: AI_Agent_TAM_2026-08.xlsx (All Tracks — Labor vs SW TAM) · 205 sub-tracks · 10 categories · updated 2026-08 · framework total $525B SW / $9.92T Labor
   </div>
 </div>
 
@@ -968,18 +969,22 @@ function renderUpdates() {
   const root = document.getElementById("updates");
   if (!upd || !upd.entries || !upd.entries.length) { root.style.display = "none"; return; }
 
-  const summary = upd.entries.find(e => e.type === "summary");
-  const byType = { tam: [], displacement: [], capability: [], players: [] };
-  upd.entries.forEach(e => { if (byType[e.type]) byType[e.type].push(e); });
+  const period = upd.period || "Latest";
+  // Only show the current cycle's entries in the banner (older cycles stay in the xlsx Change Log)
+  const current = upd.entries.filter(e => e.date === period);
+  const summary = current.find(e => e.type === "summary")
+    || upd.entries.filter(e => e.type === "summary").pop();
+  const byType = { newtrack: [], tam: [], displacement: [], capability: [], players: [] };
+  current.forEach(e => { if (byType[e.type]) byType[e.type].push(e); });
 
   const titles = {
+    newtrack: "🆕 New Tracks",
     tam: "💰 TAM Revisions",
     displacement: "🤖 Displacement Updates",
     capability: "⚡ Capability Unlocks",
     players: "🚀 Key Players & Funding",
   };
 
-  const period = upd.period || "Latest";
   const t = upd.framework && upd.framework.totals ? upd.framework.totals : {};
   const summaryLine = summary
     ? escapeHtml(summary.description)
@@ -1022,13 +1027,14 @@ function renderUpdates() {
     </div>
     <div class="updates-body">
       <div class="updates-grid">
+        ${renderBlock("newtrack")}
         ${renderBlock("tam")}
         ${renderBlock("displacement")}
         ${renderBlock("capability")}
         ${renderBlock("players")}
       </div>
       <div class="update-source">
-        Source: AI_Agent_TAM_${escapeHtml(period)}.xlsx · Change Log sheet · ${upd.entries.filter(e => e.type !== "baseline" && e.type !== "summary").length} discrete updates
+        Source: AI_Agent_TAM_${escapeHtml(period)}.xlsx · Change Log sheet · ${current.filter(e => e.type !== "baseline" && e.type !== "summary").length} updates this cycle · ${upd.entries.filter(e => e.type !== "baseline" && e.type !== "summary").length} since baseline
       </div>
     </div>`;
 

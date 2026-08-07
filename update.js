@@ -1,13 +1,13 @@
 // Auto-generated from AI_Agent_TAM.xlsx - Change Log sheet
 window.TAM_UPDATE = {
- "period": "2026-04",
+ "period": "2026-08",
  "framework": {
-  "period": "2026-04",
+  "period": "2026-08",
   "totals": {
-   "swTamB": 496.1,
-   "laborTamB": 9601.0,
-   "ratio": 19.4,
-   "tracks": 201,
+   "swTamB": 525.0,
+   "laborTamB": 9916.0,
+   "ratio": 18.9,
+   "tracks": 205,
    "categories": 10
   }
  },
@@ -319,6 +319,196 @@ window.TAM_UPDATE = {
    "category": "All categories",
    "tracks": "Framework totals",
    "description": "Total SW TAM $450B → $497B (+$47B / +10%). Labor TAM unchanged (workforce sizes stable). Overall Labor/SW ratio 19.9x → 18.0x (tightening as SW catches up in AI-native categories).",
+   "source": "Aggregate of all updates above",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "capability",
+   "typeLabel": "Type 4: Capability",
+   "category": "Multiple",
+   "tracks": "All agentic tracks",
+   "description": "Anthropic released Claude Fable 5 (Jun 9) — first public Mythos-class model, tier above Opus 4.8, ~80% SWE-bench Pro. Mythos completed Apr 7 but withheld from open release on safety grounds; Fable = safety-gated public variant. Dual-tier release is a new industry structure.",
+   "source": "CNBC / TechCrunch Jun 9 2026; Anthropic platform docs",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "capability",
+   "typeLabel": "Type 4: Capability",
+   "category": "Multiple",
+   "tracks": "Long-horizon research/agent tracks",
+   "description": "OpenAI GPT-5.6 family released Jul 9 (Sol / Terra / Luna variants). 'Astra' announced Aug 1 via 10 solved open problems in mathematics & theoretical CS — multi-agent long-horizon capability; ship decision (GPT-6 vs point release) pending.",
+   "source": "OpenAI; TechCrunch Jul 9 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "players",
+   "typeLabel": "Type 5: Players",
+   "category": "Development & Technology",
+   "tracks": "Code Generation Agent (#48)",
+   "description": "SpaceX acquired Cursor (Anysphere) for $60B all-stock (Jun 16) — largest acquisition of a VC-backed startup ever; preempted the planned $50B Series E. Close expected Q3 2026 pending review.",
+   "source": "PM Insights / Teahose / Value Add VC Jun 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "tam",
+   "typeLabel": "Type 2: TAM",
+   "category": "Development & Technology",
+   "tracks": "Code Generation Agent (#48)",
+   "description": "SW TAM $28B → $40B (+43%). Claude Code alone $8B ARR / 54% agent-coding share (Jul); Cursor $2B+ ARR; Copilot + Codex. Vendor ARR sum already >$13B and >100% growth. Ratio 22.1x → 15.5x.",
+   "source": "Gradually.ai / MindStudio / Morph Jul 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "displacement",
+   "typeLabel": "Type 3: Displacement",
+   "category": "Development & Technology",
+   "tracks": "All code tracks (#48-52)",
+   "description": "Displacement 55-75% → 65-85%. Fable 5 ~80% SWE-bench Pro; Codex/GPT-5.5 Terminal-Bench 82.7%, SWE-bench Verified 88.7%. Frontier coding agents now exceed median professional benchmarks on most sub-tasks.",
+   "source": "Morph benchmark comparison Jul 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "players",
+   "typeLabel": "Type 5: Players",
+   "category": "All",
+   "tracks": "Frontier model layer",
+   "description": "Anthropic closed $65B Series H at $965B post-money (May 28: $50B new + $15B hyperscaler commitments); confidential IPO filing Jun 1. ARR $47B (May) overtaking OpenAI ~$25B; now top-valued private company post-SpaceX-IPO.",
+   "source": "TechCrunch May 28 2026; Crunchbase News",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "players",
+   "typeLabel": "Type 5: Players",
+   "category": "All",
+   "tracks": "Q2 2026 macro",
+   "description": "Q2 2026 global VC $200B+ (2nd-largest quarter ever); H1 2026 $510B — more than all of 2025 ($440B). AI = 80% of Q2. Extreme concentration: OpenAI + Anthropic = $217B = 43% of H1; 16 companies took 53% of Q2.",
+   "source": "Crunchbase News / Global Venturing Jul 8 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "tam",
+   "typeLabel": "Type 2: TAM",
+   "category": "Enterprise Efficiency",
+   "tracks": "Customer Segmentation / After-Sales Agent (#44)",
+   "description": "SW TAM $6.0B → $7.5B (+25%). Sierra closed $950M Series E at $15.8B post (May 4, Tiger Global + GV) — +58% vs the $10B recorded in 04 cycle; expanding beyond support into sales/retention workflows. Ratio 15.8x → 12.7x.",
+   "source": "TechCrunch / SiliconANGLE May 4 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "tam",
+   "typeLabel": "Type 2: TAM",
+   "category": "Healthcare",
+   "tracks": "Drug Discovery Agent (#104)",
+   "description": "SW TAM $6.5B → $8.5B (+31%). Isomorphic Labs $2.1B Series B (May 12, Thrive; MGX/Temasek/CapitalG/UK Sovereign AI Fund) — largest AI-drug-discovery round ever. Insilico x Takeda strategic collab (Jul 1). NVIDIA x Lilly $1B co-innovation lab. Ratio 35.4x → 27.1x.",
+   "source": "PRNewswire May 12; Insilico Jul 1 2026; NVIDIA Newsroom",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "tam",
+   "typeLabel": "Type 2: TAM",
+   "category": "Enterprise Efficiency",
+   "tracks": "Recruitment Screening Agent (#28)",
+   "description": "SW TAM $0.9B → $1.3B (+44%). Mercor in talks to raise $500M at $20B (Jul 9) — 2x from $10B in 9 months, FCF-profitable. Caveat: Mercor's core is AI-training talent marketplace, so recruiting-agent read-through is partial. Ratio 155.6x → 107.7x (stays >100x).",
+   "source": "Bloomberg / Forbes Jul 9 2026",
+   "confidence": "Medium"
+  },
+  {
+   "date": "2026-08",
+   "type": "players",
+   "typeLabel": "Type 5: Players",
+   "category": "Financial Services",
+   "tracks": "Multiple — first entries for this category",
+   "description": "Ramp $750M at $44B (Jun 4, ICONIQ/GIC/OTPP; >$1B ARR; AI agents handle 85% of transaction reviews). Mercury $200M Series D at $5.2B (May 20, TCV). Capital One x Brex $5.15B closing mid-2026. Financial Services re-rating begins.",
+   "source": "TechCrunch Jun 4; CNBC May 20 2026; Crunchbase",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "tam",
+   "typeLabel": "Type 2: TAM",
+   "category": "Industrial",
+   "tracks": "Industrial/Logistics Robot Agent (#134)",
+   "description": "SW TAM $8.5B → $10.5B (+24%). Unitree STAR Market IPO: $620M raise at ~$5.9B, subscription Aug 10; profitable (35% net margin), H1 revenue +35-45% YoY — first at-scale profitable humanoid maker. Figure 03 1,000th unit Jul 23 (1/hour, BMW). 1X NEO 10K+ preorders but no verified deliveries; Optimus line not started. Ratio 21.2x → 17.1x.",
+   "source": "Xinhua / Caixin Jul 31 2026; Robot Report",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "displacement",
+   "typeLabel": "Type 3: Displacement",
+   "category": "Enterprise Efficiency",
+   "tracks": "Compliance Check Agent (#39)",
+   "description": "EU Digital Omnibus (final approval Jun 29) delayed Annex III high-risk obligations from Aug 2 2026 → Dec 2 2027 (16 months); Article 50 transparency duties still live Aug 2 2026. Displacement rate unchanged, but near-term compliance-agent demand urgency softened — first downward-timing signal in this track.",
+   "source": "Travers Smith / DLA Piper / Holland & Knight Jun 2026",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "players",
+   "typeLabel": "Type 5: Players",
+   "category": "Healthcare",
+   "tracks": "CBT Assistant Agent (watchlist #1, 437.5x)",
+   "description": "Mixed signals: Slingshot AI ($93M total, a16z-backed) scaling Ash therapy chatbot; Woebot retired consumer app (Jun 30 2025) citing FDA authorization cost vs LLM pace. Regulatory-pathway uncertainty keeps the highest-ratio track without an at-scale winner.",
+   "source": "STAT News / Behavioral Health Business / MobiHealthNews",
+   "confidence": "Medium"
+  },
+  {
+   "date": "2026-08",
+   "type": "newtrack",
+   "typeLabel": "Type 1: New Track",
+   "category": "Development & Technology",
+   "tracks": "Autonomous Penetration Testing Agent (#14)",
+   "description": "NEW TRACK. SW $3B / Labor $25B / 8.3x / disp 55-70% / Net Expansion. Autonomous continuous pentest (XBOW $1B+/$237M, Hex Security $172M) — distinct from defensive #8 Security Scanning. Weeks→hours, validated exploits.",
+   "source": "Fortune Business Insights (pentest $3.09B 2026→$7.4B 2034); MnM $4.39B 2031; XBOW/Hex funding",
+   "confidence": "Medium"
+  },
+  {
+   "date": "2026-08",
+   "type": "newtrack",
+   "typeLabel": "Type 1: New Track",
+   "category": "Agent Infrastructure & Platform",
+   "tracks": "Robotic / Embodied Foundation Model Platform (#28)",
+   "description": "NEW TRACK. SW $2.5B / Labor $120B / 48x / disp 10-20% / Net Expansion. Pure-SW robot brain (Skild $15B, Physical Intelligence, World Labs $1.23B). Highest Labor/SW arbitrage in framework; hardware-gated. Overlaps #19 by design.",
+   "source": "Marketintelo (Robot FM segment $2.26B 2026→$22.8B 2034 @41% CAGR); Skild/PI/World Labs funding",
+   "confidence": "Medium"
+  },
+  {
+   "date": "2026-08",
+   "type": "newtrack",
+   "typeLabel": "Type 1: New Track",
+   "category": "Healthcare & Life Sciences",
+   "tracks": "Ambient Clinical Documentation / Scribe Agent (#21)",
+   "description": "NEW TRACK. SW $2B / Labor $90B / 45x / disp 60-75% / Net Expansion. Abridge $5.3B ($800M+ raised, 250+ systems), Ambience $1.25B. ~40% US/Canada outpatient adoption. Jevons on clinician capacity.",
+   "source": "Fortune Business Insights (ambient docs $1.46B 2026→$7.0B); Dataintelo $2.8B; JAMA admin waste $265.6B",
+   "confidence": "Medium"
+  },
+  {
+   "date": "2026-08",
+   "type": "newtrack",
+   "typeLabel": "Type 1: New Track",
+   "category": "Agent Infrastructure & Platform",
+   "tracks": "Voice Agent Platform / Infrastructure (#29)",
+   "description": "NEW TRACK. SW $3.5B / Labor $80B / 22.9x / disp 50-65% / Mixed. Vapi $500M (beat 40 rivals for Amazon Ring), ElevenLabs $11B, Retell 30M calls/mo. Gartner: conversational AI cuts $80B contact-center labor in 2026.",
+   "source": "Grand View (AI voice agents $3.51B 2026→$35B 2033); Gartner $80B labor-cut",
+   "confidence": "High"
+  },
+  {
+   "date": "2026-08",
+   "type": "summary",
+   "typeLabel": "SUMMARY",
+   "category": "All categories",
+   "tracks": "Framework totals",
+   "description": "Total SW TAM $496.1B → $525.0B (+$28.9B / +5.8%). Labor TAM $9.60T → $9.92T (+$315B from 4 new tracks). Ratio 19.4x → 18.9x. Tracks 201 → 205 (+4 new: Autonomous Pentest, Robotic Foundation Model, Ambient Clinical Scribe, Voice Agent Platform). 4th consecutive tightening cycle. Watch next: SpaceX-Cursor close, Anthropic IPO, OpenAI Astra ship decision, YC S26 Demo Day Sep 10.",
    "source": "Aggregate of all updates above",
    "confidence": "High"
   }

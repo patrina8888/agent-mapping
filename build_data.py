@@ -5,7 +5,7 @@ import json
 import re
 import os
 
-SRC_PATH = "/Users/patrinafan/Downloads/AI_Agent_TAM_2026-04 (1).xlsx"
+SRC_PATH = "/Users/patrinafan/Downloads/AI_Agent_TAM_2026-08.xlsx"
 SHEET = "All Tracks — Labor vs SW TAM"
 CHANGELOG_SHEET = "Change Log"
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.js")
@@ -134,6 +134,7 @@ print(f"Wrote {OUT_PATH}")
 
 # ---------- Change Log extraction ----------
 TYPE_LABEL = {
+    "Type 1: New Track": "newtrack",
     "Type 2: TAM": "tam",
     "Type 3: Displacement": "displacement",
     "Type 4: Capability": "capability",
@@ -161,8 +162,8 @@ def parse_changelog(ws):
         date, utype, cat, tracks, desc, source, conf = (cells + [""] * 7)[:7]
         if not date or date.lower().startswith("legend"):
             continue
-        if utype in ("Type 2: TAM", "Type 3: Displacement", "Type 4: Capability",
-                     "Type 5: Players", "SUMMARY", "BASELINE"):
+        if utype in ("Type 1: New Track", "Type 2: TAM", "Type 3: Displacement",
+                     "Type 4: Capability", "Type 5: Players", "SUMMARY", "BASELINE"):
             entries.append({
                 "date": date,
                 "type": TYPE_LABEL.get(utype, utype),

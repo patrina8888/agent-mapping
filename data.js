@@ -512,8 +512,8 @@ window.TAM_DATA = [
   "categoryIcon": "②",
   "category": "Enterprise Efficiency & Office",
   "subTrack": "Recruitment Screening Agent (JD writing, resume filtering, interview scheduling)",
-  "swTam": 0.9,
-  "swTamStr": "$0.9B",
+  "swTam": 1.3,
+  "swTamStr": "$1.3B",
   "laborTam": 140.0,
   "laborTamStr": "$140B",
   "impactType": "🔴 Displacement",
@@ -522,12 +522,12 @@ window.TAM_DATA = [
   "netEffect": "Net Compression 🔴",
   "description": "SW: AI Recruitment $0.9B 2026 (Mordor $861M 2030 updated with Mercor/Paraform growth). Labor: Global recruiting/staffing ~$140B. YC W26 cluster: Perfectly, Skillsync, Vela all recruitment-native. [Updated 2026-04: Mercor $2B valuation, Juicebox/Paraform category emergence]",
   "companies": "Mercor; Paraform (Juicebox); Perfectly (YC W26); Skillsync (YC W26); Vela (YC W26); Ashby; Greenhouse AI; Eightfold AI; HireVue",
-  "funding": "Mercor $2B valuation (2025 Series B). Paraform ~$20M+. Eightfold AI ~$1.7B. Ashby ~$700M+. HireVue acquired by Carlyle.",
+  "funding": "Mercor $2B valuation (2025 Series B). Paraform ~$20M+. Eightfold AI ~$1.7B. Ashby ~$700M+. HireVue acquired by Carlyle. || 2026-08: Mercor in talks $500M at $20B (Jul 9 2026, 2x in 9 months).",
   "insights": "Mercor is the fastest-growing AI-native recruiter (4.5M rev/employee). Ashby is the modern ATS leader.",
   "valuationTier": "⚪ Sub-1B",
   "publicStatus": "🤝 Acquired",
-  "laborSwRatio": 155.6,
-  "laborSwRatioStr": "155.6x"
+  "laborSwRatio": 107.7,
+  "laborSwRatioStr": "107.7x"
  },
  {
   "id": 24,
@@ -880,8 +880,8 @@ window.TAM_DATA = [
   "categoryIcon": "②",
   "category": "Enterprise Efficiency & Office",
   "subTrack": "Customer Segmentation Agent (health score, churn prediction, upsell)",
-  "swTam": 6.0,
-  "swTamStr": "$6.0B",
+  "swTam": 7.5,
+  "swTamStr": "$7.5B",
   "laborTam": 95.0,
   "laborTamStr": "$95B",
   "impactType": "🟡 Mixed",
@@ -890,12 +890,12 @@ window.TAM_DATA = [
   "netEffect": "Net Expansion ✅",
   "description": "SW: AI Customer Service $6.0B 2026 (MnM $12B→$48B CAGR 26%; CX sub-segment $6B). Labor: Global CX/customer service workforce ~$95B. Gartner: conversational AI to save $80B in CX labor by 2026. [Updated 2026-04: Decagon/Sierra/Wonderful all 10x+ valuation jumps]",
   "companies": "Decagon; Sierra; Wonderful; Intercom Fin; Zendesk AI (post-Forethought); Ada; Ultimate.ai; PolyAI; Rasa",
-  "funding": "Decagon $4.5B valuation (Jan 2026, $250M Series D total $481M, 3x in <1 year). Sierra $10B ($150M+ ARR). Wonderful $2B (Mar 2026 Series B, 13-month 0→unicorn). Zendesk acquired Forethought (Mar 11, 2026). Intercom ~$1.28B Fin AI revenue. PolyAI ~$500M+. Ada ~$1.2B.",
+  "funding": "Decagon $4.5B valuation (Jan 2026, $250M Series D total $481M, 3x in <1 year). Sierra $10B ($150M+ ARR). Wonderful $2B (Mar 2026 Series B, 13-month 0→unicorn). Zendesk acquired Forethought (Mar 11, 2026). Intercom ~$1.28B Fin AI revenue. PolyAI ~$500M+. Ada ~$1.2B. || 2026-08: Sierra $950M Series E at $15.8B post (May 4 2026, Tiger Global + GV).",
   "insights": "Duopoly solidifying: Decagon vs Sierra. Wonderful niche = non-English multilingual CX. Published benchmark: Rippling 38%→50% deflection, NG.CASH 13%→70%, ClassPass 95% cost drop.",
   "valuationTier": "🟢 Unicorn",
   "publicStatus": "🤝 Acquired",
-  "laborSwRatio": 15.8,
-  "laborSwRatioStr": "15.8x"
+  "laborSwRatio": 12.7,
+  "laborSwRatioStr": "12.7x"
  },
  {
   "id": 40,
@@ -949,22 +949,22 @@ window.TAM_DATA = [
   "categoryIcon": "③",
   "category": "Development & Technology",
   "subTrack": "Code Generation Agent (requirement → function/API/page)",
-  "swTam": 28.0,
-  "swTamStr": "$28B",
+  "swTam": 40.0,
+  "swTamStr": "$40B",
   "laborTam": 620.0,
   "laborTamStr": "$620B",
   "impactType": "🔴 Displacement",
-  "displacementRate": 65.0,
-  "displacementRateStr": "55-75%",
+  "displacementRate": 75.0,
+  "displacementRateStr": "65-85%",
   "netEffect": "Net Compression 🔴",
   "description": "SW: AI coding tools market $7B+ 2026 revenue; full Dev AI segment $28B (GitHub Copilot $500M+ ARR + Cursor $2B ARR + Claude Code major share + Cognition + others). Gartner: AI-generated code 50%+ of committed code by 2027. Labor: Global software engineering ~$620B. JetBrains Jan 2026: GitHub Copilot 29% adoption, Cursor 18% = Claude Code 18%, Windsurf 8%. [Updated 2026-04: SW TAM +$16B, most dramatic TAM revision in framework]",
   "companies": "Cursor (Anysphere); Claude Code (Anthropic); Cognition (Devin); Windsurf (acq by Cognition); GitHub Copilot; Codeium; Replit; Lovable; Bolt; v0 (Vercel); Zed",
-  "funding": "Anysphere (Cursor): $60B valuation talks (Apr 2026), $2B ARR, $3.4B total raised (Series D Nov 2025 at $29.3B). Cognition: acq Windsurf $250M (Dec 2025), Devin $73M ARR. Lovable: vibe coding $9B valuation (3x in 6mo, Series D). Replit ~$3B. Claude Code: fastest-growing AI coding tool among engineers by late 2025. Composer 2 (Cursor proprietary model, 61.3 CursorBench, Apr 2026). OpenAI attempted Anysphere acquisition pre-valuation explosion.",
+  "funding": "Anysphere (Cursor): $60B valuation talks (Apr 2026), $2B ARR, $3.4B total raised (Series D Nov 2025 at $29.3B). Cognition: acq Windsurf $250M (Dec 2025), Devin $73M ARR. Lovable: vibe coding $9B valuation (3x in 6mo, Series D). Replit ~$3B. Claude Code: fastest-growing AI coding tool among engineers by late 2025. Composer 2 (Cursor proprietary model, 61.3 CursorBench, Apr 2026). OpenAI attempted Anysphere acquisition pre-valuation explosion. || 2026-08: SpaceX acquired Cursor $60B all-stock (Jun 16 2026, largest VC-backed acq ever). Claude Code $8B ARR / 54% share (Jul 2026). Copilot, Codex.",
   "insights": "Fastest-growing SaaS category in history — Cursor $100M→$2B ARR in 15 months. Category duopoly shifting: Cursor (ecosystem) vs Claude Code (experienced devs) vs Copilot (enterprise install base). Karpathy (Mar 2026): serious devs run Cursor + Claude Code + Codex in parallel.",
   "valuationTier": "🟢 Unicorn",
   "publicStatus": "🤝 Acquired",
-  "laborSwRatio": 22.1,
-  "laborSwRatioStr": "22.1x"
+  "laborSwRatio": 15.5,
+  "laborSwRatioStr": "15.5x"
  },
  {
   "id": 43,
@@ -1244,6 +1244,29 @@ window.TAM_DATA = [
  },
  {
   "id": 55,
+  "num": 14,
+  "categoryIcon": "③",
+  "category": "Development & Technology",
+  "subTrack": "Autonomous Penetration Testing Agent (recon → exploit → validate → report)",
+  "swTam": 3.0,
+  "swTamStr": "$3B",
+  "laborTam": 25.0,
+  "laborTamStr": "$25B",
+  "impactType": "✅ Expansion",
+  "displacementRate": 62.5,
+  "displacementRateStr": "55-70%",
+  "netEffect": "Net Expansion ✅",
+  "description": "SW: Pentest market $3.09B 2026 (Fortune)→$7.4B 2034; PTaaS $1.2B (Persistence). Labor: offensive-security/red-team workforce — subset of 5.5M global cyber workforce with ~4M-role gap; derived ~$25B. Distinct from defensive #8 Security Scanning.",
+  "companies": "XBOW; Hex Security (YC W26); Horizon3.ai; RunSybil; Terra Security; Anthropic red-team tooling",
+  "funding": "XBOW $120M Series C @ $1B+ (Mar 2026, DFJ Growth/Northzone; $237M total); Hex Security $172M total. || 2026-08: NEW TRACK.",
+  "insights": "Autonomous continuous pentest compresses weeks→hours and validates exploits end-to-end. Red team is 'a specialty within a specialty' — hardest security role to hire, strongest automation pull. Continuous vs annual testing = Expansion.",
+  "valuationTier": "🟢 Unicorn",
+  "publicStatus": "🏗️ Private",
+  "laborSwRatio": 8.3,
+  "laborSwRatioStr": "8.3x"
+ },
+ {
+  "id": 56,
   "num": 1,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1266,7 +1289,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "43.3x"
  },
  {
-  "id": 56,
+  "id": 57,
   "num": 2,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1289,7 +1312,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 57,
+  "id": 58,
   "num": 3,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1312,7 +1335,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "22.5x"
  },
  {
-  "id": 58,
+  "id": 59,
   "num": 4,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1335,7 +1358,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11.8x"
  },
  {
-  "id": 59,
+  "id": 60,
   "num": 5,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1358,7 +1381,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8.9x"
  },
  {
-  "id": 60,
+  "id": 61,
   "num": 6,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1381,7 +1404,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11x"
  },
  {
-  "id": 61,
+  "id": 62,
   "num": 7,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1404,7 +1427,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12x"
  },
  {
-  "id": 62,
+  "id": 63,
   "num": 8,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1427,7 +1450,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5x"
  },
  {
-  "id": 63,
+  "id": 64,
   "num": 9,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1450,7 +1473,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11.7x"
  },
  {
-  "id": 64,
+  "id": 65,
   "num": 10,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1473,7 +1496,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.9x"
  },
  {
-  "id": 65,
+  "id": 66,
   "num": 11,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1496,7 +1519,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3x"
  },
  {
-  "id": 66,
+  "id": 67,
   "num": 12,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1519,7 +1542,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4.8x"
  },
  {
-  "id": 67,
+  "id": 68,
   "num": 13,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1542,7 +1565,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8x"
  },
  {
-  "id": 68,
+  "id": 69,
   "num": 14,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1565,7 +1588,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6x"
  },
  {
-  "id": 69,
+  "id": 70,
   "num": 15,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1588,7 +1611,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "7.5x"
  },
  {
-  "id": 70,
+  "id": 71,
   "num": 16,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1611,7 +1634,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.7x"
  },
  {
-  "id": 71,
+  "id": 72,
   "num": 17,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1634,7 +1657,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 72,
+  "id": 73,
   "num": 18,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1657,7 +1680,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.2x"
  },
  {
-  "id": 73,
+  "id": 74,
   "num": 19,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1680,7 +1703,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6x"
  },
  {
-  "id": 74,
+  "id": 75,
   "num": 20,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1703,7 +1726,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8x"
  },
  {
-  "id": 75,
+  "id": 76,
   "num": 21,
   "categoryIcon": "④",
   "category": "Marketing & Growth",
@@ -1726,7 +1749,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "56.7x"
  },
  {
-  "id": 76,
+  "id": 77,
   "num": 1,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1749,7 +1772,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 77,
+  "id": 78,
   "num": 2,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1772,7 +1795,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 78,
+  "id": 79,
   "num": 3,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1795,7 +1818,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.7x"
  },
  {
-  "id": 79,
+  "id": 80,
   "num": 4,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1818,7 +1841,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11x"
  },
  {
-  "id": 80,
+  "id": 81,
   "num": 5,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1841,7 +1864,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.7x"
  },
  {
-  "id": 81,
+  "id": 82,
   "num": 6,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1864,7 +1887,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.2x"
  },
  {
-  "id": 82,
+  "id": 83,
   "num": 7,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1887,7 +1910,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11.8x"
  },
  {
-  "id": 83,
+  "id": 84,
   "num": 8,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1910,7 +1933,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12.9x"
  },
  {
-  "id": 84,
+  "id": 85,
   "num": 9,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1933,7 +1956,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "47.5x"
  },
  {
-  "id": 85,
+  "id": 86,
   "num": 10,
   "categoryIcon": "⑤",
   "category": "Financial Services & Insurance",
@@ -1956,7 +1979,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15.7x"
  },
  {
-  "id": 86,
+  "id": 87,
   "num": 1,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -1979,7 +2002,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "42.9x"
  },
  {
-  "id": 87,
+  "id": 88,
   "num": 2,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2002,7 +2025,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "18.6x"
  },
  {
-  "id": 88,
+  "id": 89,
   "num": 3,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2025,7 +2048,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11.2x"
  },
  {
-  "id": 89,
+  "id": 90,
   "num": 4,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2048,7 +2071,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "13.3x"
  },
  {
-  "id": 90,
+  "id": 91,
   "num": 5,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2071,7 +2094,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 91,
+  "id": 92,
   "num": 6,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2094,7 +2117,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "27.5x"
  },
  {
-  "id": 92,
+  "id": 93,
   "num": 7,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2117,7 +2140,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 93,
+  "id": 94,
   "num": 8,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2140,7 +2163,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 94,
+  "id": 95,
   "num": 9,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2163,13 +2186,13 @@ window.TAM_DATA = [
   "laborSwRatioStr": "41.7x"
  },
  {
-  "id": 95,
+  "id": 96,
   "num": 10,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
   "subTrack": "Drug Discovery Agent (target screening, molecular generation)",
-  "swTam": 6.5,
-  "swTamStr": "$6.5B",
+  "swTam": 8.5,
+  "swTamStr": "$8.5B",
   "laborTam": 230.0,
   "laborTamStr": "$230B",
   "impactType": "✅ Expansion",
@@ -2178,15 +2201,15 @@ window.TAM_DATA = [
   "netEffect": "Net Expansion ✅",
   "description": "SW: AI Drug Discovery $6.0-8.6B 2026 (Roots Analysis: $6.0B→$8.6B; BioMedNexus $2.6B narrow scope). Labor: Global drug discovery R&D ~$230B. Milestone: Insilico INS018_055 (ISM001-055) first fully AI-designed drug Phase IIa success (Feb 2026) — 98.4 mL FVC improvement vs -62.3 mL placebo for idiopathic pulmonary fibrosis. $6M AI design cost vs $100-200M traditional path. [Updated 2026-04: Breakthrough clinical validation changes framework]",
   "companies": "Insilico Medicine; Recursion+Exscientia (merged); Isomorphic Labs (Alphabet); Owkin; AtomWise; Iktos; LabGenius; Generate Biomedicines; Xaira Therapeutics; BenevolentAI",
-  "funding": "Insilico: $400M+ raised, $1.2-1.5B est valuation, $80-100M revenue 2025. Recursion-Exscientia merged Jul 2025, $1.8B combined valuation, $150-180M revenue. Isomorphic Labs (DeepMind spinout): AlphaFold 3 integrated into every pipeline. Xaira $1B+ (2024). LabGenius Sanofi $180M+ deal (Dec 2025). Novo Nordisk × OpenAI partnership (Apr 14, 2026). Novartis acquiring Recursion (announced 2026).",
+  "funding": "Insilico: $400M+ raised, $1.2-1.5B est valuation, $80-100M revenue 2025. Recursion-Exscientia merged Jul 2025, $1.8B combined valuation, $150-180M revenue. Isomorphic Labs (DeepMind spinout): AlphaFold 3 integrated into every pipeline. Xaira $1B+ (2024). LabGenius Sanofi $180M+ deal (Dec 2025). Novo Nordisk × OpenAI partnership (Apr 14, 2026). Novartis acquiring Recursion (announced 2026). || 2026-08: Isomorphic Labs $2.1B Series B (May 12 2026, Thrive-led, largest AI-drug round ever). Insilico x Takeda collab (Jul 1 2026).",
   "insights": "Phase I success rates AI-discovered drugs 80-90% vs 40-65% traditional. First AI drug regulatory approval 60% probability by 2027. 15-20 AI-originated drugs entering pivotal trials in 2026. Pfizer/Roche/AstraZeneca each committed $500M+ to internal AI. However: smaller AI drug discovery cos face consolidation/shutdowns, not all winners.",
   "valuationTier": "🟡 Deca+",
   "publicStatus": "🤝 Acquired",
-  "laborSwRatio": 35.4,
-  "laborSwRatioStr": "35.4x"
+  "laborSwRatio": 27.1,
+  "laborSwRatioStr": "27.1x"
  },
  {
-  "id": 96,
+  "id": 97,
   "num": 11,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2209,7 +2232,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 97,
+  "id": 98,
   "num": 12,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2232,7 +2255,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 98,
+  "id": 99,
   "num": 13,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2255,7 +2278,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "13.3x"
  },
  {
-  "id": 99,
+  "id": 100,
   "num": 14,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2278,7 +2301,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "437.5x"
  },
  {
-  "id": 100,
+  "id": 101,
   "num": 15,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2301,7 +2324,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "50x"
  },
  {
-  "id": 101,
+  "id": 102,
   "num": 16,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2324,7 +2347,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "40x"
  },
  {
-  "id": 102,
+  "id": 103,
   "num": 17,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2347,7 +2370,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "40x"
  },
  {
-  "id": 103,
+  "id": 104,
   "num": 18,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2370,7 +2393,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 104,
+  "id": 105,
   "num": 19,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2393,7 +2416,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 105,
+  "id": 106,
   "num": 20,
   "categoryIcon": "⑥",
   "category": "Healthcare & Life Sciences",
@@ -2416,7 +2439,30 @@ window.TAM_DATA = [
   "laborSwRatioStr": "25x"
  },
  {
-  "id": 106,
+  "id": 107,
+  "num": 21,
+  "categoryIcon": "⑥",
+  "category": "Healthcare & Life Sciences",
+  "subTrack": "Ambient Clinical Documentation / Scribe Agent (visit audio → structured note)",
+  "swTam": 2.0,
+  "swTamStr": "$2B",
+  "laborTam": 90.0,
+  "laborTamStr": "$90B",
+  "impactType": "✅ Expansion",
+  "displacementRate": 67.5,
+  "displacementRateStr": "60-75%",
+  "netEffect": "Net Expansion ✅",
+  "description": "SW: Ambient clinical documentation $1.46B 2026 (Fortune)→$7.0B 2034; AI medical scribe software $2.8B 2025 (Dataintelo). Labor: clinician documentation time — share of $265.6B/yr US admin waste (JAMA) + nursing docs; scoped ~$90B.",
+  "companies": "Abridge; Ambience Healthcare; Nuance DAX (Microsoft); Suki; Nabla; Commure/Athelas",
+  "funding": "Abridge $5.3B val ($800M+ total, +$316M Series E ext Apr 2026, 250+ health systems); Ambience ~$1.25B (Kleiner, OpenAI Startup Fund, Optum). || 2026-08: NEW TRACK.",
+  "insights": "One of the largest vertical-AI revenue categories — ~40% US/Canada outpatient adoption, ~2/3 of Epic hospitals by mid-2025. Frees clinician capacity (physicians ~2 EHR-hrs per care-hr) → Jevons Expansion.",
+  "valuationTier": "🟡 Deca+",
+  "publicStatus": "🏗️ Private",
+  "laborSwRatio": 45.0,
+  "laborSwRatioStr": "45x"
+ },
+ {
+  "id": 108,
   "num": 1,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2439,7 +2485,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 107,
+  "id": 109,
   "num": 2,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2462,7 +2508,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "19x"
  },
  {
-  "id": 108,
+  "id": 110,
   "num": 3,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2485,7 +2531,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 109,
+  "id": 111,
   "num": 4,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2508,7 +2554,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 110,
+  "id": 112,
   "num": 5,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2531,7 +2577,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "17.5x"
  },
  {
-  "id": 111,
+  "id": 113,
   "num": 6,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2554,7 +2600,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "32.5x"
  },
  {
-  "id": 112,
+  "id": 114,
   "num": 7,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2577,7 +2623,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "33.3x"
  },
  {
-  "id": 113,
+  "id": 115,
   "num": 8,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2600,7 +2646,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.9x"
  },
  {
-  "id": 114,
+  "id": 116,
   "num": 9,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2623,7 +2669,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8.6x"
  },
  {
-  "id": 115,
+  "id": 117,
   "num": 10,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2646,7 +2692,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8.8x"
  },
  {
-  "id": 116,
+  "id": 118,
   "num": 11,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2669,7 +2715,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 117,
+  "id": 119,
   "num": 12,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2692,7 +2738,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 118,
+  "id": 120,
   "num": 13,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2715,7 +2761,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "18.8x"
  },
  {
-  "id": 119,
+  "id": 121,
   "num": 14,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2738,7 +2784,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "88.9x"
  },
  {
-  "id": 120,
+  "id": 122,
   "num": 15,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2761,7 +2807,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "24x"
  },
  {
-  "id": 121,
+  "id": 123,
   "num": 16,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2784,7 +2830,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "11.4x"
  },
  {
-  "id": 122,
+  "id": 124,
   "num": 17,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2807,7 +2853,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 123,
+  "id": 125,
   "num": 18,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2830,13 +2876,13 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 124,
+  "id": 126,
   "num": 19,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
   "subTrack": "Industrial/Logistics Robot Agent (picking, transport, sorting)",
-  "swTam": 8.5,
-  "swTamStr": "$8.5B",
+  "swTam": 10.5,
+  "swTamStr": "$10.5B",
   "laborTam": 180.0,
   "laborTamStr": "$180B",
   "impactType": "🔴 Displacement",
@@ -2845,15 +2891,15 @@ window.TAM_DATA = [
   "netEffect": "Net Compression 🔴",
   "description": "SW: Industrial AI + Humanoid robotics $8.5B 2026 (+$3.5B). World model investment surged €1.3B→€6.5B 2024-2025 (Physical Intelligence, Skild AI). [Updated 2026-04: Humanoid robotics production ramp hits compounds]",
   "companies": "Figure AI; Tesla Optimus; Agility Robotics (Digit); Boston Dynamics Atlas; 1X; Unitree; Agibot (China); Physical Intelligence; Skild AI; Covariant (acq Amazon)",
-  "funding": "Figure AI $39B valuation ($1B+ Series C Sep 2025). Physical Intelligence $2.4B (Nov 2024). Skild AI $4.5B. 1X $1B+. Agility Digit commercial at Toyota Canada (Feb 2026). Agibot 10,000 robots shipped by Mar 2026. AMI Labs $1.03B seed (Yann LeCun world models, Europe largest ever).",
+  "funding": "Figure AI $39B valuation ($1B+ Series C Sep 2025). Physical Intelligence $2.4B (Nov 2024). Skild AI $4.5B. 1X $1B+. Agility Digit commercial at Toyota Canada (Feb 2026). Agibot 10,000 robots shipped by Mar 2026. AMI Labs $1.03B seed (Yann LeCun world models, Europe largest ever). || 2026-08: Unitree STAR Market IPO $620M at ~$5.9B (Aug 2026, profitable, 35% net margin). Figure 03 1,000th unit Jul 23.",
   "insights": "Symbotic ($5B) leads warehouse automation publicly. GreyOrange ($1.7B) and Locus ($2B) are private leaders.",
   "valuationTier": "🟢 Unicorn",
   "publicStatus": "🏗️ Private",
-  "laborSwRatio": 21.2,
-  "laborSwRatioStr": "21.2x"
+  "laborSwRatio": 17.1,
+  "laborSwRatioStr": "17.1x"
  },
  {
-  "id": 125,
+  "id": 127,
   "num": 20,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2876,7 +2922,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "37.6x"
  },
  {
-  "id": 126,
+  "id": 128,
   "num": 21,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2899,7 +2945,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12x"
  },
  {
-  "id": 127,
+  "id": 129,
   "num": 22,
   "categoryIcon": "⑦",
   "category": "Industrial & Supply Chain",
@@ -2922,7 +2968,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 128,
+  "id": 130,
   "num": 1,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -2945,7 +2991,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "55x"
  },
  {
-  "id": 129,
+  "id": 131,
   "num": 2,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -2968,7 +3014,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "33.3x"
  },
  {
-  "id": 130,
+  "id": 132,
   "num": 3,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -2991,7 +3037,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "38.9x"
  },
  {
-  "id": 131,
+  "id": 133,
   "num": 4,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3014,7 +3060,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "40x"
  },
  {
-  "id": 132,
+  "id": 134,
   "num": 5,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3037,7 +3083,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "27.8x"
  },
  {
-  "id": 133,
+  "id": 135,
   "num": 6,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3060,7 +3106,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12x"
  },
  {
-  "id": 134,
+  "id": 136,
   "num": 7,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3083,7 +3129,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 135,
+  "id": 137,
   "num": 8,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3106,7 +3152,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12x"
  },
  {
-  "id": 136,
+  "id": 138,
   "num": 9,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3129,7 +3175,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 137,
+  "id": 139,
   "num": 10,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3152,7 +3198,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "13.3x"
  },
  {
-  "id": 138,
+  "id": 140,
   "num": 11,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3175,7 +3221,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 139,
+  "id": 141,
   "num": 12,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3198,7 +3244,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "50x"
  },
  {
-  "id": 140,
+  "id": 142,
   "num": 13,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3221,7 +3267,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 141,
+  "id": 143,
   "num": 14,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3244,7 +3290,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "18.8x"
  },
  {
-  "id": 142,
+  "id": 144,
   "num": 15,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3267,7 +3313,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "50x"
  },
  {
-  "id": 143,
+  "id": 145,
   "num": 16,
   "categoryIcon": "⑧",
   "category": "Education & Research",
@@ -3290,7 +3336,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 144,
+  "id": 146,
   "num": 1,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3313,7 +3359,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "18x"
  },
  {
-  "id": 145,
+  "id": 147,
   "num": 2,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3336,7 +3382,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "18.8x"
  },
  {
-  "id": 146,
+  "id": 148,
   "num": 3,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3359,7 +3405,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16x"
  },
  {
-  "id": 147,
+  "id": 149,
   "num": 4,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3382,7 +3428,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 148,
+  "id": 150,
   "num": 5,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3405,7 +3451,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6x"
  },
  {
-  "id": 149,
+  "id": 151,
   "num": 6,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3428,7 +3474,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.3x"
  },
  {
-  "id": 150,
+  "id": 152,
   "num": 7,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3451,7 +3497,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16x"
  },
  {
-  "id": 151,
+  "id": 153,
   "num": 8,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3474,7 +3520,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 152,
+  "id": 154,
   "num": 9,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3497,7 +3543,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12x"
  },
  {
-  "id": 153,
+  "id": 155,
   "num": 10,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3520,7 +3566,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 154,
+  "id": 156,
   "num": 11,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3543,7 +3589,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 155,
+  "id": 157,
   "num": 12,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3566,7 +3612,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 156,
+  "id": 158,
   "num": 13,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3589,7 +3635,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "60x"
  },
  {
-  "id": 157,
+  "id": 159,
   "num": 14,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3612,7 +3658,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 158,
+  "id": 160,
   "num": 15,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3635,7 +3681,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "22.5x"
  },
  {
-  "id": 159,
+  "id": 161,
   "num": 16,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3658,7 +3704,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "62.5x"
  },
  {
-  "id": 160,
+  "id": 162,
   "num": 17,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3681,7 +3727,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "50x"
  },
  {
-  "id": 161,
+  "id": 163,
   "num": 18,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3704,7 +3750,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "16.7x"
  },
  {
-  "id": 162,
+  "id": 164,
   "num": 19,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3727,7 +3773,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12.5x"
  },
  {
-  "id": 163,
+  "id": 165,
   "num": 20,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3750,7 +3796,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "27.5x"
  },
  {
-  "id": 164,
+  "id": 166,
   "num": 21,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3773,7 +3819,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 165,
+  "id": 167,
   "num": 22,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3796,7 +3842,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "30x"
  },
  {
-  "id": 166,
+  "id": 168,
   "num": 23,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3819,7 +3865,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5.3x"
  },
  {
-  "id": 167,
+  "id": 169,
   "num": 24,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3842,7 +3888,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 168,
+  "id": 170,
   "num": 25,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3865,7 +3911,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.7x"
  },
  {
-  "id": 169,
+  "id": 171,
   "num": 26,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3888,7 +3934,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4.2x"
  },
  {
-  "id": 170,
+  "id": 172,
   "num": 27,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3911,7 +3957,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "13.3x"
  },
  {
-  "id": 171,
+  "id": 173,
   "num": 28,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3934,7 +3980,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 172,
+  "id": 174,
   "num": 29,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3957,7 +4003,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "15x"
  },
  {
-  "id": 173,
+  "id": 175,
   "num": 30,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -3980,7 +4026,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "20x"
  },
  {
-  "id": 174,
+  "id": 176,
   "num": 31,
   "categoryIcon": "⑨",
   "category": "Public Services & Governance",
@@ -4003,7 +4049,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6.7x"
  },
  {
-  "id": 175,
+  "id": 177,
   "num": 1,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4026,7 +4072,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 176,
+  "id": 178,
   "num": 2,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4049,7 +4095,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4x"
  },
  {
-  "id": 177,
+  "id": 179,
   "num": 3,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4072,7 +4118,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.3x"
  },
  {
-  "id": 178,
+  "id": 180,
   "num": 4,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4095,7 +4141,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 179,
+  "id": 181,
   "num": 5,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4118,7 +4164,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4x"
  },
  {
-  "id": 180,
+  "id": 182,
   "num": 6,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4141,7 +4187,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 181,
+  "id": 183,
   "num": 7,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4164,7 +4210,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.3x"
  },
  {
-  "id": 182,
+  "id": 184,
   "num": 8,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4187,7 +4233,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "6x"
  },
  {
-  "id": 183,
+  "id": 185,
   "num": 9,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4210,7 +4256,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4x"
  },
  {
-  "id": 184,
+  "id": 186,
   "num": 10,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4233,7 +4279,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5x"
  },
  {
-  "id": 185,
+  "id": 187,
   "num": 11,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4256,7 +4302,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5.3x"
  },
  {
-  "id": 186,
+  "id": 188,
   "num": 12,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4279,7 +4325,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 187,
+  "id": 189,
   "num": 13,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4302,7 +4348,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "3.8x"
  },
  {
-  "id": 188,
+  "id": 190,
   "num": 14,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4325,7 +4371,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5x"
  },
  {
-  "id": 189,
+  "id": 191,
   "num": 15,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4348,7 +4394,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5x"
  },
  {
-  "id": 190,
+  "id": 192,
   "num": 16,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4371,7 +4417,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "5.3x"
  },
  {
-  "id": 191,
+  "id": 193,
   "num": 17,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4394,7 +4440,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4x"
  },
  {
-  "id": 192,
+  "id": 194,
   "num": 18,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4417,7 +4463,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "8x"
  },
  {
-  "id": 193,
+  "id": 195,
   "num": 19,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4440,7 +4486,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "10x"
  },
  {
-  "id": 194,
+  "id": 196,
   "num": 20,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4463,7 +4509,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "4x"
  },
  {
-  "id": 195,
+  "id": 197,
   "num": 21,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4486,7 +4532,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "12.5x"
  },
  {
-  "id": 196,
+  "id": 198,
   "num": 22,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4509,7 +4555,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "82.4x"
  },
  {
-  "id": 197,
+  "id": 199,
   "num": 23,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4532,7 +4578,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "64.6x"
  },
  {
-  "id": 198,
+  "id": 200,
   "num": 24,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4555,7 +4601,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "39x"
  },
  {
-  "id": 199,
+  "id": 201,
   "num": 25,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4578,7 +4624,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "47.3x"
  },
  {
-  "id": 200,
+  "id": 202,
   "num": 26,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4601,7 +4647,7 @@ window.TAM_DATA = [
   "laborSwRatioStr": "27.1x"
  },
  {
-  "id": 201,
+  "id": 203,
   "num": 27,
   "categoryIcon": "⑩",
   "category": "Agent Infrastructure & Platform",
@@ -4622,5 +4668,51 @@ window.TAM_DATA = [
   "publicStatus": "🏛️ Public",
   "laborSwRatio": 34.0,
   "laborSwRatioStr": "34x"
+ },
+ {
+  "id": 204,
+  "num": 28,
+  "categoryIcon": "⑩",
+  "category": "Agent Infrastructure & Platform",
+  "subTrack": "Robotic / Embodied Foundation Model Platform (perception→action policy, any hardware)",
+  "swTam": 2.5,
+  "swTamStr": "$2.5B",
+  "laborTam": 120.0,
+  "laborTamStr": "$120B",
+  "impactType": "✅ Expansion",
+  "displacementRate": 15.0,
+  "displacementRateStr": "10-20%",
+  "netEffect": "Net Expansion ✅",
+  "description": "SW: Robot Foundation Model segment $2.26B 2026 (Marketintelo)→$22.8B 2034 @41% CAGR; Physical AI software $1.5-6.7B. Labor: near-term robotics-addressable manual labor across form factors (mfg/logistics/service), scoped ~$120B — overlaps #19 Industrial Robot by design.",
+  "companies": "Skild AI; Physical Intelligence (PI); World Labs (Fei-Fei Li); Nvidia GR00T; Google DeepMind Gemini Robotics",
+  "funding": "Skild $1.4B @ $15B (Mar 2026); Physical Intelligence $400M (open base model); World Labs ~$1.23B ($1B Feb 2026). || 2026-08: NEW TRACK.",
+  "insights": "Pure-software 'robot brain' licensed onto any hardware — the highest Labor/SW arbitrage in the framework. Hardware-gated near-term (low disp) but the labor ceiling is enormous. 48x, just under the 50x deep-dive threshold.",
+  "valuationTier": "🟡 Deca+",
+  "publicStatus": "🏗️ Private",
+  "laborSwRatio": 48.0,
+  "laborSwRatioStr": "48x"
+ },
+ {
+  "id": 205,
+  "num": 29,
+  "categoryIcon": "⑩",
+  "category": "Agent Infrastructure & Platform",
+  "subTrack": "Voice Agent Platform / Infrastructure (STT→LLM→TTS orchestration, telephony)",
+  "swTam": 3.5,
+  "swTamStr": "$3.5B",
+  "laborTam": 80.0,
+  "laborTamStr": "$80B",
+  "impactType": "🟡 Mixed",
+  "displacementRate": 57.5,
+  "displacementRateStr": "50-65%",
+  "netEffect": "Net Expansion ✅",
+  "description": "SW: AI Voice Agents $3.51B 2026 (Grand View)→$35B 2033 @39% CAGR; broader conversational AI $18B. Labor: contact-center — Gartner projects conversational AI cuts $80B contact-center labor cost in 2026; 12M+ agents globally.",
+  "companies": "Vapi; Retell AI; ElevenLabs; Bland; PolyAI; LiveKit",
+  "funding": "Vapi $500M val (won Amazon Ring over 40 rivals, May 2026); ElevenLabs $11B (Feb 2026, $500M round); Retell 30M calls/mo. || 2026-08: NEW TRACK.",
+  "insights": "Horizontal voice-delivery layer beneath CX (#22 Segmentation), sales, reception. Substitutes live agents but expands 24/7 multilingual coverage → Mixed. 22.9x.",
+  "valuationTier": "🟡 Deca+",
+  "publicStatus": "🏗️ Private",
+  "laborSwRatio": 22.9,
+  "laborSwRatioStr": "22.9x"
  }
 ];

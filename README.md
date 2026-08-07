@@ -49,18 +49,28 @@ Future of Jobs, Grand View Research and MarketsandMarkets.
 
 ## Current baseline
 
-- Source file: `AI_Agent_TAM_2026-04.xlsx`
-- Software TAM total: **$496B** (was $450B in 2025-Q1 baseline → **+$47B / +10%**)
-- Labor TAM total: **$9.60T** (workforce sizes stable)
-- Overall Labor/SW ratio: **19.4×** (was 19.9× → tightening as software catches up in AI-native categories)
-- 2026-04 cycle: 30 changes — see in-app banner for the full list
+- Source file: `AI_Agent_TAM_2026-08.xlsx`
+- **Tracks: 205** (was 201 → **+4 new tracks**, first count change since baseline)
+- Software TAM total: **$525B** (was $496B in 2026-04 → **+$29B / +5.8%**)
+- Labor TAM total: **$9.92T** (was $9.60T → +$315B from the 4 new tracks)
+- Overall Labor/SW ratio: **18.9×** (was 19.4× → 4th consecutive tightening cycle)
+- 2026-08 cycle: 18 changes + 4 new tracks — see in-app banner for the full list
 
-### 2026-04 update highlights
+### 2026-08 new tracks (Type 1)
 
-- **Code Generation Agent** — SW TAM $12B → **$28B** (+133%, largest single revision). Cursor $60B / $2B ARR; Claude Code & Codex mainstream.
-- **Legal cluster** (Contract / Compliance / Case / IP / Tax) — SW TAMs +45-75% on Harvey $11B, Legora $5.55B, YC W26 super-agent platforms.
-- **CX & Translation** — Decagon $4.5B Series D, Sierra $10B / $150M ARR, Wonderful $2B redefines translation-CX boundary.
-- **Drug Discovery** — Insilico INS018_055 Phase IIa success; SW TAM $4B → $6.5B; displacement 35-50% → 45-65%.
-- **Humanoid robotics** — Figure AI $39B + Helix 02 VLA breakthrough; physical-task steps moving PARTIAL → FULL.
-- **Capability** — Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro all at 1M context. Computer-use upgraded to FULL on UI workflows.
-- **Q1 2026 macro** — record $300B quarterly VC, AI = 80% ($242B). Mega-rounds: OpenAI $122B / Anthropic $30B Series G / xAI $20B / Waymo $16B.
+- **Autonomous Penetration Testing Agent** (#14, Dev & Tech) — SW $3B / Labor $25B / 8.3× / Expansion. XBOW $1B+, Hex Security $172M; distinct from defensive Security Scanning.
+- **Robotic / Embodied Foundation Model Platform** (#28, Agent Infra) — SW $2.5B / Labor $120B / **48×** / Expansion. Skild $15B, Physical Intelligence, World Labs — pure-software robot brain, highest Labor/SW arbitrage in the framework.
+- **Ambient Clinical Documentation / Scribe Agent** (#21, Healthcare) — SW $2B / Labor $90B / **45×** / Expansion. Abridge $5.3B, Ambience $1.25B.
+- **Voice Agent Platform / Infrastructure** (#29, Agent Infra) — SW $3.5B / Labor $80B / 22.9× / Mixed. Vapi $500M, ElevenLabs $11B; Gartner: convo-AI cuts $80B contact-center labor in 2026.
+
+### 2026-08 update highlights
+
+- **SpaceX acquired Cursor** for **$60B** all-stock (Jun 16) — largest VC-backed startup acquisition ever; preempted the planned $50B Series E.
+- **Code Generation Agent** — SW TAM $28B → **$40B** (+43%). Claude Code alone $8B ARR / 54% share; displacement 55-75% → **65-85%** on Fable 5 (~80% SWE-bench Pro).
+- **Anthropic** closed **$65B Series H at $965B** (May 28) + confidential IPO filing Jun 1; $47B ARR overtakes OpenAI (~$25B).
+- **Capability tier shift** — Claude Fable 5 / Mythos-class (Jun 9); GPT-5.6 Sol/Terra/Luna (Jul 9); OpenAI "Astra" announced Aug 1 with 10 solved open math problems.
+- **Humanoid inflection** — Unitree launches first profitable-humanoid IPO (STAR Market, $620M at ~$5.9B, 35% net margin); Figure 03 hits 1,000th unit; Industrial Robot SW TAM $8.5B → $10.5B.
+- **Financial Services opens** — first-ever category entries: Ramp $750M @ $44B, Mercury $200M @ $5.2B, Capital One × Brex $5.15B.
+- **Drug Discovery** — Isomorphic $2.1B Series B (largest AI-drug round ever) + Insilico × Takeda; SW TAM $6.5B → $8.5B.
+- **Compliance headwind** — EU Digital Omnibus delays Annex III high-risk obligations to Dec 2027; first downward-timing signal in the framework.
+- **Q2 2026 macro** — $200B+ quarterly VC (2nd-largest ever), H1 $510B > all of 2025; OpenAI + Anthropic = 43% of H1 funding.
