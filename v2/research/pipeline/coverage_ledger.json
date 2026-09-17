@@ -1,0 +1,102 @@
+{
+ "as_of": "2026-09-16",
+ "denominator_global_wage_bill_T": 60,
+ "band_T": [
+  58,
+  61
+ ],
+ "covered_named_tracks_T": 28.6,
+ "note": "Named-track [W] sum EXCLUDING non-additive re-cuts/overlays. Family priors tile the full T; the gap to named tracks is thin in-person-services coverage (see W3.8), not a missing family.",
+ "physical_recut_T": 15.0,
+ "carveouts_T": {
+  "agriculture_broadacre": 3,
+  "mining_extraction_drilling": 2,
+  "fishing_forestry": 1,
+  "heavy_process_industry": 2,
+  "informal_subsistence_and_unpaid_domestic": "~8-10 (non-market)"
+ },
+ "enforcement_tags": [
+  {
+   "tag": "non_additive_physical",
+   "rows": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7"
+   ],
+   "rule": "P1-P7 are a capability RE-CUT of W5/W6/W9/W12.2 — the same ~$15T. Present physical dollars through ONE organization at a time (P-capability view for the gate; W-industry view for the score). NEVER sum the P-view and the W-view."
+  },
+  {
+   "tag": "informal_care_L_once",
+   "rows": [
+    "P6",
+    "W14.1"
+   ],
+   "rule": "P6 informal-care [L] (~$11T) and W14.1 consumer/household [L] (~$11T) are ONE pool. Never sum the two latent tails."
+  },
+  {
+   "tag": "overlays_non_additive",
+   "rows": [
+    "SA.1",
+    "SA.2",
+    "SA.3",
+    "SA.4",
+    "SA.5",
+    "SA.6",
+    "AO.1",
+    "W7.1",
+    "W7.7"
+   ],
+   "rule": "Services-Arbitrage, Autonomous-Business-Ops, and Trust/Relational are re-cuts of W1/W2/W3 — excluded from the [W] exhaustion sum."
+  }
+ ],
+ "opened_this_cycle": [
+  "P8 robot-economy net-new labor (physical twin of W8)",
+  "W3.8 in-person consumer & personal services (thin cell, MECE completeness)"
+ ],
+ "residual_white_cells_todo": [
+  {
+   "cell": "P3b non-road autonomous transport (air/sea/rail)",
+   "size_T": [
+    0.3,
+    0.6
+   ],
+   "class": "un-homed boundary"
+  },
+  {
+   "cell": "protein/food-processing deformable manufacturing",
+   "size_T": [
+    0.15,
+    0.3
+   ],
+   "action": "overlay-stamp into P5"
+  },
+  {
+   "cell": "apparel/textile/footwear sewing",
+   "size_T": [
+    0.2,
+    0.5
+   ],
+   "action": "home in P5"
+  },
+  {
+   "cell": "waste/sanitation/recycling sorting",
+   "size_T": [
+    0.1,
+    0.2
+   ],
+   "action": "collection->P2, MRF sorting->P5"
+  },
+  {
+   "cell": "utilities plant & field ops",
+   "size_T": [
+    0.1,
+    0.3
+   ],
+   "action": "control-room->W1.7, field->P4"
+  }
+ ]
+}

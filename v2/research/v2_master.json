@@ -32,7 +32,8 @@
   "verify_conf": "Medium",
   "fam_key": "AO",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.1",
@@ -69,7 +70,8 @@
   "verify_conf": "Medium",
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.2",
@@ -100,7 +102,8 @@
   "verify_conf": null,
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.3",
@@ -137,7 +140,8 @@
   "verify_conf": "Medium",
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.4",
@@ -172,7 +176,8 @@
   "verify_conf": "High",
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.5",
@@ -209,7 +214,8 @@
   "verify_conf": "Medium",
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "SA.6",
@@ -240,7 +246,8 @@
   "verify_conf": null,
   "fam_key": "SA",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "W1.1a",
@@ -274,7 +281,8 @@
   "verify_conf": "High",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.1b",
@@ -309,7 +317,8 @@
   "verify_conf": "Medium",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.2",
@@ -344,7 +353,8 @@
   "verify_conf": "Low",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.3",
@@ -380,7 +390,8 @@
   "verify_conf": "Medium",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.4",
@@ -416,7 +427,8 @@
   "verify_conf": "High",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.5",
@@ -447,7 +459,8 @@
   "verify_conf": null,
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.6",
@@ -485,7 +498,8 @@
   "verify_conf": "Medium",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.7",
@@ -516,7 +530,8 @@
   "verify_conf": null,
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W1.8",
@@ -554,7 +569,8 @@
   "verify_conf": "Medium",
   "fam_key": "W1",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W10.1",
@@ -585,7 +601,8 @@
   "verify_conf": null,
   "fam_key": "W10",
   "headcount_m": 250,
-  "atrisk_m": 27
+  "atrisk_m": 27,
+  "non_additive": false
  },
  {
   "id": "W10.2",
@@ -616,7 +633,8 @@
   "verify_conf": null,
   "fam_key": "W10",
   "headcount_m": 40,
-  "atrisk_m": 4
+  "atrisk_m": 4,
+  "non_additive": false
  },
  {
   "id": "W10.3",
@@ -647,7 +665,8 @@
   "verify_conf": null,
   "fam_key": "W10",
   "headcount_m": 80,
-  "atrisk_m": 10
+  "atrisk_m": 10,
+  "non_additive": false
  },
  {
   "id": "W11.1",
@@ -678,7 +697,8 @@
   "verify_conf": null,
   "fam_key": "W11",
   "headcount_m": 20,
-  "atrisk_m": 3
+  "atrisk_m": 3,
+  "non_additive": false
  },
  {
   "id": "W11.2",
@@ -709,7 +729,8 @@
   "verify_conf": null,
   "fam_key": "W11",
   "headcount_m": 90,
-  "atrisk_m": 1.5
+  "atrisk_m": 1.5,
+  "non_additive": false
  },
  {
   "id": "W11.3",
@@ -740,7 +761,8 @@
   "verify_conf": null,
   "fam_key": "W11",
   "headcount_m": 6,
-  "atrisk_m": 1.2
+  "atrisk_m": 1.2,
+  "non_additive": false
  },
  {
   "id": "W12.1",
@@ -771,7 +793,8 @@
   "verify_conf": null,
   "fam_key": "W12",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W12.2",
@@ -802,7 +825,8 @@
   "verify_conf": null,
   "fam_key": "W12",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W13.1",
@@ -833,7 +857,8 @@
   "verify_conf": null,
   "fam_key": "W13",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W13.2",
@@ -864,7 +889,8 @@
   "verify_conf": null,
   "fam_key": "W13",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W14.1",
@@ -895,7 +921,8 @@
   "verify_conf": null,
   "fam_key": "W14",
   "headcount_m": 76,
-  "atrisk_m": 2
+  "atrisk_m": 2,
+  "non_additive": false
  },
  {
   "id": "W15.1",
@@ -926,7 +953,8 @@
   "verify_conf": null,
   "fam_key": "W15",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W15.2",
@@ -957,7 +985,8 @@
   "verify_conf": null,
   "fam_key": "W15",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.1",
@@ -988,7 +1017,8 @@
   "verify_conf": null,
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.2",
@@ -1024,7 +1054,8 @@
   "verify_conf": "Medium",
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.3",
@@ -1055,7 +1086,8 @@
   "verify_conf": null,
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.4",
@@ -1086,7 +1118,8 @@
   "verify_conf": null,
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.5",
@@ -1117,7 +1150,8 @@
   "verify_conf": null,
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.6",
@@ -1148,7 +1182,8 @@
   "verify_conf": null,
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W2.7",
@@ -1184,7 +1219,8 @@
   "verify_conf": "Medium",
   "fam_key": "W2",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.1",
@@ -1222,7 +1258,8 @@
   "verify_conf": "Medium",
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.2",
@@ -1257,7 +1294,8 @@
   "verify_conf": "High",
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.3",
@@ -1288,7 +1326,8 @@
   "verify_conf": null,
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.4",
@@ -1319,7 +1358,8 @@
   "verify_conf": null,
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.5",
@@ -1350,7 +1390,8 @@
   "verify_conf": null,
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.6",
@@ -1387,7 +1428,8 @@
   "verify_conf": "Medium",
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W3.7",
@@ -1418,7 +1460,8 @@
   "verify_conf": null,
   "fam_key": "W3",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.1",
@@ -1449,7 +1492,8 @@
   "verify_conf": null,
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.10",
@@ -1487,7 +1531,8 @@
   "verify_conf": "Medium",
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.2",
@@ -1525,7 +1570,8 @@
   "verify_conf": "Medium",
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.3",
@@ -1561,7 +1607,8 @@
   "verify_conf": "Medium",
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.4",
@@ -1592,7 +1639,8 @@
   "verify_conf": null,
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.5",
@@ -1628,7 +1676,8 @@
   "verify_conf": "Medium",
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.6",
@@ -1659,7 +1708,8 @@
   "verify_conf": null,
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.7",
@@ -1694,7 +1744,8 @@
   "verify_conf": "Medium",
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.8",
@@ -1725,7 +1776,8 @@
   "verify_conf": null,
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W4.9",
@@ -1756,7 +1808,8 @@
   "verify_conf": null,
   "fam_key": "W4",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.1",
@@ -1791,7 +1844,8 @@
   "verify_conf": "Medium",
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.2",
@@ -1822,7 +1876,8 @@
   "verify_conf": null,
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.3",
@@ -1858,7 +1913,8 @@
   "verify_conf": "High",
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.4",
@@ -1889,7 +1945,8 @@
   "verify_conf": null,
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.5",
@@ -1920,7 +1977,8 @@
   "verify_conf": null,
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.6",
@@ -1951,7 +2009,8 @@
   "verify_conf": null,
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W5.7",
@@ -1982,7 +2041,8 @@
   "verify_conf": null,
   "fam_key": "W5",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.1",
@@ -2013,7 +2073,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.2",
@@ -2044,7 +2105,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.3",
@@ -2075,7 +2137,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.4",
@@ -2106,7 +2169,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.5",
@@ -2137,7 +2201,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.6",
@@ -2168,7 +2233,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W6.7",
@@ -2199,7 +2265,8 @@
   "verify_conf": null,
   "fam_key": "W6",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W7.1",
@@ -2230,7 +2297,8 @@
   "verify_conf": null,
   "fam_key": "W7",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "W7.7",
@@ -2261,7 +2329,8 @@
   "verify_conf": null,
   "fam_key": "W7",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": true
  },
  {
   "id": "W8.1",
@@ -2292,7 +2361,8 @@
   "verify_conf": null,
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W8.2",
@@ -2323,7 +2393,8 @@
   "verify_conf": null,
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W8.3",
@@ -2361,7 +2432,8 @@
   "verify_conf": "Medium",
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W8.4",
@@ -2398,7 +2470,8 @@
   "verify_conf": "Medium",
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W8.5",
@@ -2429,7 +2502,8 @@
   "verify_conf": null,
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W8.6",
@@ -2464,7 +2538,8 @@
   "verify_conf": "Medium",
   "fam_key": "W8",
   "headcount_m": null,
-  "atrisk_m": null
+  "atrisk_m": null,
+  "non_additive": false
  },
  {
   "id": "W9.1",
@@ -2495,7 +2570,8 @@
   "verify_conf": null,
   "fam_key": "W9",
   "headcount_m": 47,
-  "atrisk_m": 3.5
+  "atrisk_m": 3.5,
+  "non_additive": false
  },
  {
   "id": "W9.2",
@@ -2526,7 +2602,8 @@
   "verify_conf": null,
   "fam_key": "W9",
   "headcount_m": 55,
-  "atrisk_m": 5
+  "atrisk_m": 5,
+  "non_additive": false
  },
  {
   "id": "W9.3",
@@ -2557,6 +2634,328 @@
   "verify_conf": null,
   "fam_key": "W9",
   "headcount_m": 30,
-  "atrisk_m": 3.5
+  "atrisk_m": 3.5,
+  "non_additive": false
+ },
+ {
+  "id": "P1",
+  "name": "Structured-Cell Manipulation & Production",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "A",
+  "labor_tam": "~$4.2T [W] structured-environment manipulation (machine-tending W5.3, piece-pick/pack W5.2, structured food/bev W5.7, offsite prefab W5.6) + net-new lab/pharma & precision micro-assembly (~$20–40B). NON-ADDITIVE re-cut of W5 — counted once, never summed with W5.",
+  "tag": "W",
+  "labor_b": 4200.0,
+  "sw_tam": "Industrial-automation incumbent + integrator stack (FANUC/ABB/KUKA/Siemens); ~$30–40B captured today ≈ the map's physical capture ceiling.",
+  "V": 4,
+  "H": 2,
+  "P": 4,
+  "R": 1,
+  "L": 2,
+  "D": 4,
+  "coupled": true,
+  "net": "Compression",
+  "conv": "High",
+  "capture": "~1–1.5% (map ceiling; ~0.9M machine-tending robots ≈ 20% of 4.66M industrial stock, ~$30–40B / ~$2.0–2.8T pool). Everywhere else in Family P capture rounds to zero.",
+  "verdict": "compression",
+  "htc": "OEM/integrator layer is incumbent-owned + capital-heavy — NOT the seed wedge. Investable adjacency is the data/commissioning layer (P8), not the arm.",
+  "falsi": "Machine-tending-robot installed base > ~1.3M units by 2028 with disclosed labor-avoidance = accelerating capture.",
+  "anti": "The one physical cell where displacement is actually real — but value accrues to industrial-automation incumbents/integrators, not startups; a smarter cross-embodiment 'brain' commoditizes the model and hands margin to the OEM.",
+  "players": [
+   "FANUC",
+   "ABB",
+   "KUKA",
+   "Siemens",
+   "Automata (lab)",
+   "Physical Intelligence (brain)"
+  ],
+  "verify_conf": "High",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P2",
+  "name": "Bounded-Space Mobility & Frontline Service-Physical",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "A",
+  "labor_tam": "~$1.05T [W] mobility + light-manip in mapped bounded spaces (warehouse AMR W5.1, commercial floor cleaning W5.5) + physical slice of retail/food-service (W10 overlay-stamped, not summed). NON-ADDITIVE re-cut.",
+  "tag": "W",
+  "labor_b": 1050.0,
+  "sw_tam": "AMR OEMs; Amazon internalized 1M+ robots (surfaces as avoided hiring, not vendor ARR).",
+  "V": 5,
+  "H": 2,
+  "P": 3,
+  "R": 1,
+  "L": 2,
+  "D": 3,
+  "coupled": true,
+  "net": "Mixed",
+  "conv": "High",
+  "capture": "<1%; structurally understated (Amazon internalized robotics = avoided hiring, not ARR).",
+  "verdict": "mixed",
+  "htc": "Seed door largely closed in horizontal AMR; live wedges are vertical/edge-case mobility + the fleet-ops software layer (→P8).",
+  "falsi": "Sidewalk/indoor delivery-robot fleets clear unit-economics at >~10k sustained commercial units by 2028.",
+  "anti": "'Warehouse robots are a land grab' — but the horizontal AMR door is already closed (Amazon 1M+ internalized); remaining seed room is vertical edge-cases and fleet software, not another AMR OEM.",
+  "players": [
+   "Amazon Robotics",
+   "Symbotic",
+   "Locus Robotics",
+   "Serve Robotics",
+   "Starship"
+  ],
+  "verify_conf": "High",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P3",
+  "name": "Open-Road Autonomous Mobility (AV / Transport)",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "B",
+  "labor_tam": "~$1.55T [W] driver wage bill on public roads (robotaxi W9.1, trucking W9.2, last-mile W9.3). NON-ADDITIVE re-cut of W9. AV hardware/compute/RaaS is [$] capital, never summed.",
+  "tag": "W",
+  "labor_b": 1550.0,
+  "sw_tam": "AV stack + RaaS [$] capex (Waymo/Aurora/Kodiak); AV remote-assist teleop ~$0.55B 2026 (report-mill, direction only).",
+  "V": 5,
+  "H": 2,
+  "P": 5,
+  "R": 5,
+  "L": 2,
+  "D": 5,
+  "coupled": true,
+  "net": "Mixed",
+  "conv": "Medium",
+  "capture": "<1%; decade-long tail (only ~40% line-haul AV-addressable near-term). Gate is R=5 safety-case/liability, not dexterity.",
+  "verdict": "mixed",
+  "htc": "Capex/RaaS, not a labor-software seed market; value in the AV stack ([$]) and teleop-assist (→P8).",
+  "falsi": "Driverless trucking revenue-miles cross a disclosed commercial threshold on interstate lanes by 2028.",
+  "anti": "The gate is regulatory/liability, not the driving model — which is why P3 is split from P2 despite both being 'locomotion'; a better model doesn't move the safety-case clock.",
+  "players": [
+   "Waymo",
+   "Aurora",
+   "Kodiak",
+   "Gatik",
+   "Zoox",
+   "Tesla FSD"
+  ],
+  "verify_conf": "Medium",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P4",
+  "name": "Unstructured Dexterous & Field Manipulation",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "B",
+  "labor_tam": "~$5.3T [W] gross-to-fine manipulation in open/novel environments, non-human-contact (skilled trades W6.1, unstructured construction W6.2, field service W6.4, unstructured janitorial W6.5). NON-ADDITIVE re-cut of W6. LARGEST notional pool with ~0 realized capture.",
+  "tag": "W",
+  "labor_b": 5300.0,
+  "sw_tam": "n/a — hardware-timeline-blocked; better VLAs help perception, but the dexterity/hardware gate dominates.",
+  "V": 4,
+  "H": 3,
+  "P": 5,
+  "R": 3,
+  "L": 1,
+  "D": 4,
+  "coupled": true,
+  "net": "Expansion",
+  "conv": "Low",
+  "capture": "~0% (too-early). The clearest 'huge pool, hardware-timeline-blocked' cell — do NOT read the $5.3T as addressable.",
+  "verdict": "mixed",
+  "htc": "Not a seed-software question — a robotics-timeline question (5–15 yr). Watch π-class dexterity milestones, not app-layer startups.",
+  "falsi": "A general-purpose site/field manipulator clears a real trade task at >~80% autonomous success outside a demo by 2028.",
+  "anti": "The $5.3T headline is the biggest trap on the map: near-zero capturable for 5–15 years regardless of model IQ — the gate is actuation/dexterity/cost/MTBF, not the brain.",
+  "players": [
+   "Physical Intelligence",
+   "Figure",
+   "1X",
+   "Boston Dynamics",
+   "Skild AI"
+  ],
+  "verify_conf": "Medium",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P5",
+  "name": "Deformable & Contact-Rich Manipulation",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "B",
+  "labor_tam": "~$1.3T [W] thin/slippery/deformable + contact-rich manipulation (specialty-crop harvest W6.6, food prep/QSR W6.7, textile/garment sewing, laundry, hotel housekeeping soft-goods W10 overlay, protein/food-processing). NON-ADDITIVE re-cut.",
+  "tag": "W",
+  "labor_b": 1300.0,
+  "sw_tam": "n/a — the dexterity frontier; no mass-market laundry/food robot.",
+  "V": 4,
+  "H": 2,
+  "P": 5,
+  "R": 2,
+  "L": 2,
+  "D": 4,
+  "coupled": true,
+  "net": "Mixed",
+  "conv": "Low",
+  "capture": "~0%. NARROW-CROSSED / GENERAL-BLOCKED: π0 >80% on known-garment T-shirt folding (narrow), general deformable (arbitrary fabric/food) undemonstrated. The one place physical dexterity is measurably moving.",
+  "verdict": "mixed",
+  "htc": "The falsifiable indicator IS the cell: does deformable generalization move from known-garment folding to ARBITRARY fabric/food at >80% by ~2028?",
+  "falsi": "Arbitrary (not known-garment) deformable manipulation clears >80% success by ~2028 → P5 begins to convert; else stays a research frontier.",
+  "anti": "Isolated as its own watch-cell precisely because it's the single measurable dexterity mover (π0 folding) — but 'narrow crossed' is not 'general solved'; there is still no laundry robot.",
+  "players": [
+   "Physical Intelligence (π0)",
+   "Toyota Research",
+   "Dyna Robotics",
+   "Chef Robotics",
+   "Miso Robotics"
+  ],
+  "verify_conf": "Medium",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P6",
+  "name": "Human-Contact Care & Physical Assistance",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "B",
+  "labor_tam": "~$1.1T [W] paid + ~$11T informal [L] — fine manipulation with direct sustained human physical contact (personal care/ADL, patient handling, rehab; W6.3). NON-ADDITIVE re-cut. NOTE: the ~$11T [L] is the SAME pool as W14.1 — never sum the two latent tails.",
+  "tag": "W",
+  "labor_b": 1100.0,
+  "sw_tam": "n/a — highest safety/trust/licensing gate; augmentation (lift-assist, monitoring) on durable human labor.",
+  "V": 2,
+  "H": 4,
+  "P": 5,
+  "R": 4,
+  "L": 1,
+  "D": 4,
+  "coupled": true,
+  "net": "Expansion",
+  "conv": "Low",
+  "capture": "~0%. Distinctive tailwind: INVERTED social license under demographic-shortage mandates (Japan ~11M gap, Korea) → near-zero displacement politics → least-friction embodied-AI deployment path despite the hardest capability gate.",
+  "verdict": "mixed",
+  "htc": "The cell that directly feeds the HTC robotics thesis — but the investable expression is the data/teleop layer under the shortage mandate (P8), not the care-robot OEM.",
+  "falsi": "A care robot performs an unsupervised ADL task (transfer/toileting/feeding) at clinical-safety threshold in a real facility by 2028.",
+  "anti": "Care is the hardest capability gate yet the LEAST-friction deployment path — because inverted social license (shortage mandates) removes the displacement backlash that blocks everywhere else.",
+  "players": [
+   "1X (Neo)",
+   "Cyberdyne",
+   "Toyota HSR",
+   "Panasonic",
+   "Richtech"
+  ],
+  "verify_conf": "Low",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P7",
+  "name": "Embodied Sensing, Inspection & Security",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "A",
+  "labor_tam": "~$0.5T [W] + large [L] — perception-dominant low-manip autonomy: commercial security/guarding, autonomous rounds, infra/energy/mining inspection, structured visual QC (W5.4), defense ISR/logistics (W12.2, sovereign R5). Largely NET-NEW [W]+[L] folded here; W5.4/W12.2 re-homed once.",
+  "tag": "W",
+  "labor_b": 500.0,
+  "sw_tam": "Site/telemetry data + integration moat (physical twin of the SOC data moat). Knightscope ~$7–11/hr vs $25–45/hr human guard.",
+  "V": 4,
+  "H": 2,
+  "P": 3,
+  "R": 3,
+  "L": 3,
+  "D": 4,
+  "coupled": true,
+  "net": "Mixed",
+  "conv": "Medium",
+  "capture": "<1%. Structural shape = W1.8 SOC: compression of the staffed guard/inspector rung + [L] expansion into never-patrolled coverage.",
+  "verdict": "mixed",
+  "htc": "The structural MIRROR of the SOC hunting ground in the physical world — most-deployed-today band (actuation is light). Wedge = detection/site-telemetry data + fleet-supervision layer (understaffed → no displacement backlash), NOT the patrol-robot chassis.",
+  "falsi": "A pure-play security-robot fleet discloses >~$100M retained ARR at coverage-hours a guard force can't match by Q4-2027.",
+  "anti": "Everyone watches humanoids; the deployed embodied money is in boring perception-dominant security/inspection — because sensing is far easier than acting, and the moat is site-telemetry data, not the chassis.",
+  "players": [
+   "Knightscope",
+   "Cobalt Robotics",
+   "Skydio",
+   "Anduril",
+   "Percepto",
+   "Gecko Robotics"
+  ],
+  "verify_conf": "Medium",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": true
+ },
+ {
+  "id": "P8",
+  "name": "Robot-Economy Labor (teleop / supervision / data-verify / sim)",
+  "family": "PhysicalAI · Embodied (re-cut)",
+  "fam_key": "P",
+  "tier": "A",
+  "labor_tam": "~$5–15B [W] net-new, >100% YoY — the human wage bill the robot economy CREATES (physical twin of W8): teleop-as-a-service + embodied-data collection, robot fleet remote supervision ('wrangler'), robot commissioning/field-maintenance (physical FDE), embodied-data frame-verification, sim/scenario authoring. NET-NEW — outside the $15T displaceable base.",
+  "tag": "W",
+  "labor_b": 10.0,
+  "sw_tam": "Managed-service teleop forming (AV teleop ~$0.55B 2026, robot-teleop-cloud $4.2B 2025 — [$] service proxies, not the labor line). Robot hardware/compute [$], out; only headcount lands in P8.",
+  "V": 3,
+  "H": 3,
+  "P": 1,
+  "R": 2,
+  "L": 3,
+  "D": 3,
+  "coupled": false,
+  "net": "Expansion",
+  "conv": "Medium",
+  "capture": "n/a (no displaced pool — additive creation, like W8, never subtracted or summed into the $15T).",
+  "verdict": "watch",
+  "htc": "THE thesis layer: the one part of the physical stack that is (a) capability-gating for everyone, (b) hardware-decoupled, (c) labor/process-scaled not capex-scaled, (d) not yet incumbent-captured. CyberOrigin (HTC portfolio anchor) sits here — frame-verified embodied data. The map missed it because it tracked physical displacement but had no physical CREATION family.",
+  "falsi": "Does frame-verified embodied-data revenue (CyberOrigin/AgiBot/1X-class) sustain >100% YoY into 2027 — or does synthetic/sim data collapse the human-teleop wage bill before it scales?",
+  "anti": "The investable layer isn't the humanoid OEM (bubble: Unitree ~$9B not $50B, no fleet >low-hundreds) — it's the hardware-decoupled data/teleop/verification layer underneath, which every OEM and lab needs and none has captured.",
+  "players": [
+   "CyberOrigin",
+   "Physical Intelligence (data)",
+   "Scale AI (embodied)",
+   "1X (teleop)",
+   "AgiBot"
+  ],
+  "verify_conf": "Medium",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": false
+ },
+ {
+  "id": "W3.8",
+  "name": "In-person Consumer & Personal Services (thin cell)",
+  "family": "Digital · real-time interpersonal",
+  "fam_key": "W3",
+  "tier": "B",
+  "labor_tam": "~$3–6T [W] formal paid in-person personal services (hairdressing/beauty, fitness/personal training, paid childcare & early-ed aides, pet care, funeral, personal/event service staff). The map's largest named-track under-fill (W3 prior $8–12T vs named ~$2.3T). Opened for MECE completeness + to de-bias the dollar-weighted headline. Additive — was previously uncounted.",
+  "tag": "W",
+  "labor_b": 4500.0,
+  "sw_tam": "~none — no vendor pins a production wage-replacing metric; booking/scheduling SaaS only.",
+  "V": 2,
+  "H": 2,
+  "P": 2,
+  "R": 1,
+  "L": 2,
+  "D": 2,
+  "coupled": true,
+  "net": "Mixed",
+  "conv": "Low",
+  "capture": "≈0% (trust + physical-presence gate). Not investable; a headcount-companion carve-in.",
+  "verdict": "avoid",
+  "htc": "NOT a seed hunting ground — trust/presence gate makes capture≈0. Tracked for completeness and to de-bias the total-TAM headline.",
+  "falsi": "A funded vendor pins a production wage-replacing (not scheduling/booking) metric in personal services by Q4-2027 → re-underwrite; base case no → stays a headcount-companion carve-in.",
+  "anti": "The map's biggest hole isn't a hot new AI market — it's a $3–6T in-person services tail the dollar-weighted lens hid and AI can't touch (presence+trust gate). Naming it de-biases 'total agent TAM'; it is completeness, not opportunity.",
+  "players": [],
+  "verify_conf": "Low",
+  "headcount_m": null,
+  "atrisk_m": null,
+  "non_additive": false
  }
 ]
