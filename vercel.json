@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/v3", "destination": "/v2/dashboard/index_cn.html" },
+    { "source": "/v3/en", "destination": "/v2/dashboard/index.html" },
+    { "source": "/v3/talk", "destination": "/v2/v3_talk.html" }
+  ]
+}
