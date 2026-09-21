@@ -1,0 +1,375 @@
+<title>从 205 行到 87 行</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#FBFAFC; --surface:#FFFFFF; --surface2:#F4F2F8;
+    --line:#E4E0EC; --line2:#CFC8DE;
+    --ink:#1A1823; --muted:#6B6580; --faint:#918AA6;
+    --accent:#5B4FD1; --accent-soft:#EDEAFB;
+    --good:#1F7A4D; --good-soft:#E4F2EA;
+    --warn:#9A6A12; --warn-soft:#F7EFDC;
+    --bad:#B8493A; --bad-soft:#FAE8E4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1117; --surface:#171A23; --surface2:#1E222D;
+      --line:#2A2F3C; --line2:#3A4052;
+      --ink:#E9EBF1; --muted:#A2A9BC; --faint:#77809A;
+      --accent:#8B84F0; --accent-soft:#232048;
+      --good:#6FCF8E; --good-soft:#16301F;
+      --warn:#E5B95C; --warn-soft:#332815;
+      --bad:#F0776C; --bad-soft:#331C19;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1117; --surface:#171A23; --surface2:#1E222D;
+    --line:#2A2F3C; --line2:#3A4052;
+    --ink:#E9EBF1; --muted:#A2A9BC; --faint:#77809A;
+    --accent:#8B84F0; --accent-soft:#232048;
+    --good:#6FCF8E; --good-soft:#16301F;
+    --warn:#E5B95C; --warn-soft:#332815;
+    --bad:#F0776C; --bad-soft:#331C19;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.85; margin:0;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding-block:38px 90px; padding-left:20px; padding-right:20px}
+  h1,h2,h3{font-family:"Noto Serif SC",Georgia,serif; margin:0; line-height:1.3; text-wrap:balance}
+  .mono{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+
+  /* header */
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:.72rem; letter-spacing:.16em; color:var(--accent); text-transform:uppercase}
+  h1{font-size:2.15rem; font-weight:700; margin:.5rem 0 .6rem}
+  .standfirst{color:var(--muted); font-size:1.02rem; max-width:62ch}
+  .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+  .chip{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--muted);
+        background:var(--surface2); border:1px solid var(--line); border-radius:99px; padding:3px 11px}
+
+  /* agenda */
+  .agenda{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:28px 0 34px}
+  .agenda h2{font-size:.95rem; color:var(--accent); margin-bottom:12px}
+  .agenda ol{margin:0; padding:0; list-style:none; display:grid; gap:7px}
+  .agenda li{display:flex; gap:12px; align-items:baseline; font-size:.93rem}
+  .agenda .n{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--faint); min-width:2.1em}
+  .agenda .t{flex:1}
+  .agenda .d{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--muted)}
+
+  /* sections */
+  section{margin:0 0 46px}
+  .shead{border-top:2px solid var(--accent); padding-top:14px; margin-bottom:18px}
+  .shead .row{display:flex; gap:12px; align-items:baseline; flex-wrap:wrap}
+  .shead .num{font-family:"IBM Plex Mono",monospace; font-size:.8rem; color:var(--accent); font-weight:600}
+  .shead h2{font-size:1.45rem; font-weight:700; flex:1; min-width:220px}
+  .shead .dur{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--muted)}
+  .landing{color:var(--muted); font-size:.88rem; margin-top:7px; font-style:italic}
+
+  p{margin:0 0 1.05em}
+  .say{max-width:66ch}
+  .say strong{color:var(--ink); font-weight:700}
+  em.beat{display:block; font-style:normal; color:var(--faint); font-family:"IBM Plex Mono",monospace;
+          font-size:.74rem; letter-spacing:.06em; margin:1.5em 0 .7em}
+
+  /* callouts */
+  .pull{background:var(--accent-soft); border-left:3px solid var(--accent); border-radius:0 8px 8px 0;
+        padding:14px 18px; margin:1.3em 0; font-size:1.02rem}
+  .pull b{color:var(--accent)}
+  .note{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin:1.3em 0; font-size:.92rem; color:var(--muted)}
+  .note b{color:var(--ink)}
+
+  /* number strip */
+  .nums{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:1.4em 0}
+  .num-card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px}
+  .num-card .v{font-family:"IBM Plex Mono",monospace; font-size:1.3rem; font-weight:600; color:var(--accent)}
+  .num-card .k{font-size:.79rem; color:var(--muted); margin-top:2px}
+
+  /* compare table */
+  .tablewrap{overflow-x:auto; margin:1.3em 0}
+  table{width:100%; border-collapse:collapse; font-size:.9rem; min-width:520px}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+  thead th{font-size:.75rem; letter-spacing:.05em; color:var(--muted); font-weight:500; text-transform:uppercase; border-bottom:1px solid var(--line2)}
+  td.v1{color:var(--muted)}
+  td.v2{color:var(--ink)}
+
+  /* track cards */
+  .track{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:12px 0}
+  .track.hero{border-color:var(--accent); border-width:1.5px}
+  .track .th{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; margin-bottom:9px}
+  .track .id{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:#fff; background:var(--accent); border-radius:5px; padding:2px 7px; font-weight:600}
+  .track h3{font-size:1.06rem; font-weight:700; flex:1; min-width:180px}
+  .track .score{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--muted)}
+  .track dl{margin:0; display:grid; gap:9px}
+  .track dt{font-size:.72rem; letter-spacing:.06em; color:var(--accent); font-family:"IBM Plex Mono",monospace; margin-bottom:2px}
+  .track dd{margin:0; font-size:.93rem; color:var(--ink)}
+  .track dd.m{color:var(--muted)}
+
+  /* avoid list */
+  .avoid{display:grid; gap:8px; margin:1.2em 0}
+  .avoid-item{display:flex; gap:12px; background:var(--bad-soft); border:1px solid var(--line); border-radius:9px; padding:11px 15px; font-size:.92rem}
+  .avoid-item .x{color:var(--bad); font-weight:700; font-family:"IBM Plex Mono",monospace}
+  .avoid-item b{color:var(--ink)}
+
+  /* tests */
+  .tests{counter-reset:t; display:grid; gap:9px; margin:1.3em 0; padding:0; list-style:none}
+  .tests li{counter-increment:t; display:flex; gap:13px; background:var(--good-soft); border:1px solid var(--line); border-radius:9px; padding:11px 15px; font-size:.93rem}
+  .tests li::before{content:counter(t); font-family:"IBM Plex Mono",monospace; color:var(--good); font-weight:700; font-size:.85rem}
+
+  /* qa */
+  .qa{display:grid; gap:12px; margin-top:14px}
+  .qa-item{background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--warn); border-radius:0 9px 9px 0; padding:13px 17px}
+  .qa-q{font-weight:700; font-size:.94rem; margin-bottom:5px}
+  .qa-a{font-size:.91rem; color:var(--muted)}
+  .qa-a b{color:var(--ink)}
+
+  .closer{background:var(--surface2); border:1px solid var(--line2); border-radius:12px; padding:22px 24px; margin-top:30px}
+  .closer h2{font-size:1.2rem; margin-bottom:10px}
+  .closer .three{display:grid; gap:9px; margin-top:14px; padding:0; list-style:none}
+  .closer .three li{display:flex; gap:11px; font-size:.95rem}
+  .closer .three .k{font-family:"IBM Plex Mono",monospace; color:var(--accent); font-weight:600; font-size:.8rem}
+
+  footer{margin-top:46px; padding-top:16px; border-top:1px solid var(--line); color:var(--faint); font-size:.82rem}
+  @media (max-width:600px){
+    h1{font-size:1.7rem} .shead h2{font-size:1.24rem} body{font-size:15px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Hat-Trick Capital · 内部汇报讲稿</div>
+    <h1>从 205 行到 87 行</h1>
+    <p class="standfirst">重建 Agent 劳动力地图:为什么原来那张表不能用来下注,新表怎么读,以及今天真正能投的五个格子。</p>
+    <div class="meta">
+      <span class="chip">全长 ≈ 15 分钟</span>
+      <span class="chip">2026-09-21</span>
+      <span class="chip">配合中文看板演示</span>
+    </div>
+  </header>
+
+  <nav class="agenda">
+    <h2>今天讲五件事</h2>
+    <ol>
+      <li><span class="n">01</span><span class="t">出发点 —— 我为什么要把它重做一遍</span><span class="d">2.5′</span></li>
+      <li><span class="n">02</span><span class="t">改了什么 —— 相较 v1 的六处结构性改动</span><span class="d">4′</span></li>
+      <li><span class="n">03</span><span class="t">新表怎么看 —— 五步,和一条读法铁律</span><span class="d">3′</span></li>
+      <li><span class="n">04</span><span class="t">落到实处 —— 五个可投赛道,和该避开的四个</span><span class="d">4.5′</span></li>
+      <li><span class="n">05</span><span class="t">收尾 —— 最反直觉的那条结论</span><span class="d">1′</span></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">01</span><h2>出发点</h2><span class="dur">2.5′</span></div>
+      <div class="landing">这一段的落点:原来那张表的核心论点,有一个会计错误。</div>
+    </div>
+    <div class="say">
+      <p>先说我们原来那张表在说什么。它有 <b class="mono">205</b> 个赛道、10 个大类,核心论点写在首页上:<strong>Labor TAM 是 9.92 万亿美元,Software TAM 是 5250 亿,劳动盘子是软件盘子的 18.9 倍 —— 这个差额,就是 AI Agent 的机会。</strong></p>
+      <p>这句话听起来很有说服力。我做这个项目的出发点,是我发现它在最要紧的那些品类里,是错的。</p>
+      <em class="beat">停一拍,举例子</em>
+      <p>举个具体的。客服。Sierra 这家公司怎么收钱?按"解决一单"收。它每收到的一块钱,来自哪里?来自被省下的那个客服的工资。</p>
+      <p>所以在客服这一格里,Labor TAM 和 Software TAM <strong>不是两个可以相加的市场,是同一笔钱的两种说法</strong>。原来那张表把它们并排放成两列,再把差额叫作"机会" —— 等于把同一笔钱数了两遍,还把重复计算的那部分当成了增长空间。</p>
+      <div class="pull">这不是小数点的问题。放到编码这一格:全场收入最高的赛道,ARR <b>100–160 亿美元</b>。如果按老读法把它算成"替代",会<b>高估大约 10 倍</b> —— 因为其中九成是给<b>还在岗</b>的资深工程师的席位费。</div>
+      <p>所以我重做的出发点,不是想把地图做得更大、更全 —— 是想把它做得<strong>能下注</strong>。我把问的问题换了:</p>
+      <div class="note">从 <b>「这个市场有多大」</b> 换成 <b>「哪一格我们今天能进、能进多少钱、什么信号出现就说明我判断错了」</b>。</div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">02</span><h2>相较 v1 的六处改动</h2><span class="dur">4′</span></div>
+      <div class="landing">这一段的落点:不是加数据,是换方法论。</div>
+    </div>
+    <div class="say">
+      <p><strong>第一,也是最核心的:耦合。</strong>新表的每一行,第一件事是判断它是<strong>替代型</strong>还是<strong>增益型</strong>。替代型 —— agent 顶掉人、按结果收费 —— 它的软件收入 = 捕获率 × 被替代的工资,<strong>永远不能相加</strong>。增益型 —— 人还在,agent 只是帮他提效 —— 那软件才是另算的一笔钱。全场 87 行里,<b class="mono">62 行(71%)</b>是替代型。也就是说,老表的加法错误,影响的是七成的表。</p>
+      <p><strong>第二,从一个比率,换成六个打分。</strong>"18.9 倍"只告诉你市场大,不告诉你能不能进。新表给每一行六个维度打 0–5 分:验(结果可不可验证)、时(要 agent 自主多久)、物(物理门槛)、管(监管门槛)、厂(被大厂吃掉的风险)、据(数据护城河)。其中真正决定"能不能投"的是<strong>"厂"</strong> —— 门还开不开。</p>
+      <p><strong>第三,自上而下 × 自下而上 对撞。</strong>老表是纯自上而下分类。新表先自上而下推出候选,再<strong>独立</strong>做七轮自下而上扫描 —— 融资、YC 批次、招聘、产品发布、外包运营商财报 —— 然后把两边撞在一起。撞出两类东西:</p>
+      <div class="nums">
+        <div class="num-card"><div class="v">白空间</div><div class="k">能力已具备,但没有一家公司在做 —— 保险核保理赔、自主 SOC</div></div>
+        <div class="num-card"><div class="v">死格</div><div class="k">市场根本不会形成 —— 高风险谈判直接删掉,另外 4 个降级</div></div>
+      </div>
+      <p><strong>第四,落地折扣。</strong>MIT 的研究:95% 的企业 AI 部署对利润零贡献。S&amp;P:弃用率从 17% 升到 42%。不到 15% 真的进生产。所以新表里任何"高把握",只要没有<strong>生产级</strong>证据(不是 POC、不是签单额),一律打折。</p>
+      <p><strong>第五,每一行都带可证伪指标和反共识。</strong>不是观点,是可以被打脸的赌注 —— 到某个日期,某个数字达到或没达到,我就改判。这是我们自己的风格,现在写进了表的每一行。</p>
+      <p><strong>第六,这个月刚做完的 v3,加了三件事:</strong>GPT-6 出来后的增量重跑;新建了一等的 PhysicalAI 具身家族(P1–P8);以及把整张表接成一条<strong>常驻筛选管线</strong>,会自动顶出"新可投"和"假设被证伪"。</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>维度</th><th>v1(原表)</th><th>v2 / v3(新表)</th></tr></thead>
+          <tbody>
+            <tr><td>行数</td><td class="v1">205 赛道 · 10 大类</td><td class="v2">87 行 · 18 大类</td></tr>
+            <tr><td>核心算法</td><td class="v1">Labor TAM 与 SW TAM 两列并排,取比率</td><td class="v2">先判耦合;替代型 = 捕获率 × 被替代工资,永不相加</td></tr>
+            <tr><td>打分</td><td class="v1">单一比率 18.9x</td><td class="v2">六轴 V/H/P/R/L/D</td></tr>
+            <tr><td>来源</td><td class="v1">自上而下分类</td><td class="v2">自上而下 × 七轮自下而上,对撞</td></tr>
+            <tr><td>落地</td><td class="v1">按能力估替代率</td><td class="v2">生产级证据才算数,否则打折</td></tr>
+            <tr><td>可证伪</td><td class="v1">无</td><td class="v2">每行一条带日期的证伪指标 + 反共识</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><b>一句要先说明白的:</b>新表首页那个 28.6 万亿,<b>不要</b>和老表的 9.92 万亿直接比 —— 口径不同(新表是全球约 60 万亿工资盘下的命名赛道、含物理)。而且<b>这个数字本身不是交付物</b>。交付物是下面那些能下注的格子。</div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">03</span><h2>新表怎么看</h2><span class="dur">3′</span></div>
+      <div class="landing">这一段的落点:一条铁律 —— 大 ≠ 可投。</div>
+    </div>
+    <div class="say">
+      <p>切到看板。五步:</p>
+      <p><strong>一,</strong>一行 = 一类人在做的工作。<strong>二,</strong>「盘子 $B」= 这类工作现在<strong>付给人</strong>的钱 —— 这是天花板,不是软件收入。<strong>三,</strong>看「类型」栏,替代型还是增益型,这是全表最重要的一栏。<strong>四,</strong>看六个打分,尤其看「厂」—— 门还开不开。<strong>五,</strong>点开任意一行,里面有三段:HTC 入场点、和市场共识哪里不一样、什么信号能证明对错。</p>
+      <em class="beat">然后讲铁律 —— 这是整段的重点</em>
+      <div class="pull"><b>大 ≠ 可投。</b>这张表最大的用处,是帮我们<b>拒绝</b>看起来很大的东西。</div>
+      <p>三个例子,现场就能点开看:</p>
+      <p><strong>翻译。</strong>全表替代得最干净的一格 —— 结果完全可验证,机器已经又便宜又好。但"厂"打 5 分,门关死了,价值全归大厂和模型实验室。<strong>替代是真的,可投是假的。</strong></p>
+      <p><strong>机器看管。</strong>盘子 2 万亿,全表最大。但物理门槛把它的可达捕获压到几乎为零 —— 打分系统自动把这个"数字陷阱"拆掉了,它排不到前面。</p>
+      <p><strong>催收。</strong>盘子只有 500 亿,全表最小的那一档之一。但结果可验证满分、没有物理门槛、门大开 —— <strong>可投性打分全场第一。</strong></p>
+      <div class="note">所以读法是:<b>可投 = 打分高 AND 门还开着 AND 有一个正在发生的触发器</b>。三个条件缺一个都不投。</div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">04</span><h2>五个可投赛道</h2><span class="dur">4.5′</span></div>
+      <div class="landing">这一段的落点:每一个都带一句反共识和一条证伪线。</div>
+    </div>
+    <div class="say">
+
+      <div class="track hero">
+        <div class="th"><span class="id">W3.7</span><h3>催收与应收外呼</h3><span class="score mono">可投性 69.5 · 全场第一</span></div>
+        <dl>
+          <dt>为什么可投</dt>
+          <dd>成功单元是全表最干净的 —— <strong>追回了多少钱</strong>,能直接按成功费收钱。结果可验证满分、没有物理门槛、门大开。受 FDCPA/TCPA 监管,这在这里<strong>是护城河不是墙</strong>:懂合规的外呼才敢做。</dd>
+          <dt>反共识</dt>
+          <dd class="m">钱全涌向了 AI SDR(外呼里"性感"的那一半),而它已经被证伪 —— 11x 真实留存约 300 万美元,对外宣称 1000 万,流失率 70–80%,整个品类退回人机混合。<strong>同样是外呼,隔壁这个受监管、按成功费的一半才是真的。市场把钱投错了半边。</strong></dd>
+          <dt>证伪线</dt>
+          <dd class="m">到 2027Q4:一家 AI 催收厂商做到 5000 万美元以上<strong>留存</strong>收入、流失低于 20% → 成立;若复制 SDR 的崩盘曲线 → 放弃。</dd>
+        </dl>
+      </div>
+
+      <div class="track">
+        <div class="th"><span class="id">P7</span><h3>具身感知 · 巡检 · 安防</h3><span class="score mono">v3 新开</span></div>
+        <dl>
+          <dt>为什么可投</dt>
+          <dd>它是<strong>自主 SOC 在物理世界的结构镜像</strong>:保安本来就招不满 —— 人手不够,所以<strong>没有替代反弹</strong>。而且感知比操作容易得多,所以这是今天真正部署最多的具身带。价差是实的:Knightscope 每小时 7–11 美元,人工保安 25–45 美元。</dd>
+          <dt>入场点</dt>
+          <dd class="m">买<strong>检测 + 现场遥测数据 + 车队监管</strong>那一层,<strong>不买巡逻机器人本体</strong>。护城河是场地数据,不是底盘。</dd>
+          <dt>证伪线</dt>
+          <dd class="m">到 2027Q4 有纯玩家披露 1 亿美元以上留存 ARR,且覆盖工时是人力做不到的 → 成立。</dd>
+        </dl>
+      </div>
+
+      <div class="track hero">
+        <div class="th"><span class="id">P8</span><h3>机器人经济劳动力(遥操作 / 数据核验)</h3><span class="score mono">我们已有仓位</span></div>
+        <dl>
+          <dt>为什么可投</dt>
+          <dd>整张物理地图里,<strong>唯一同时满足四条</strong>的一层:<strong>(a)</strong> 对所有人都是能力瓶颈 —— 数据是具身 AI 的绑定约束;<strong>(b)</strong> 与硬件解耦 —— 不用赌哪家 OEM 赢;<strong>(c)</strong> 靠人和流程扩张,不是靠资本开支(遥操作每小时只产 5–50 个片段);<strong>(d)</strong> 还没被在位者占住。<strong>CyberOrigin 就在这一层。</strong></dd>
+          <dt>反共识</dt>
+          <dd class="m">所有人盯着人形机器人本体 —— 但宇树的公开市值约 90 亿美元,<strong>不是</strong>传闻的 500 亿;至今没有任何一家人形机器人有超过几百台的持续商业化车队,连平均无故障时间都没人敢披露。<strong>本体是资本开支陷阱,底下的数据层才是生意。</strong></dd>
+          <dt>证伪线</dt>
+          <dd class="m">逐帧核验的具身数据收入能否在 2027 年保持 100% 以上同比增长 —— 或者被合成/仿真数据在规模化之前吃掉。</dd>
+        </dl>
+      </div>
+
+      <div class="track">
+        <div class="th"><span class="id">W1.8</span><h3>自主 SOC 的邻区(工控 / 取证 / 中端托管)</h3></div>
+        <dl>
+          <dt>为什么可投</dt>
+          <dd>告警分诊本身<strong>已经在关门</strong> —— CrowdStrike、Palo Alto 把它当捆绑功能出。但护城河<strong>不迁移</strong>的邻区还开着:工控安全、入侵后取证、中端托管检测。</dd>
+          <dt>市场信号</dt>
+          <dd class="m">YC 最近几批的安全公司<strong>几乎全部绕开</strong>通用 SOC,去打应用安全和渗透测试 —— 这本身就说明主干已经挤满了。</dd>
+        </dl>
+      </div>
+
+      <div class="track">
+        <div class="th"><span class="id">W4.10</span><h3>保险 —— 只投代位追偿这一小片</h3></div>
+        <dl>
+          <dt>为什么只投一小片</dt>
+          <dd>主干(核保、理赔)在今年 4 月被核心系统厂商 Duck Creek 直接产品化了,加上 2026 年有 7 个以上的州立法规定"拒赔必须由持牌的人签字" —— <strong>门在关,而且是双向关的</strong>。</dd>
+          <dt>还开着的那片</dt>
+          <dd class="m">代位追偿:保险公司先赔给客户、再回头找真正的责任方要钱。全行业每年漏掉约 200 亿美元,成功单元干净(追回多少),可以按结果收费。</dd>
+        </dl>
+      </div>
+
+      <em class="beat">然后讲"不投什么" —— 这段和上面一样重要</em>
+      <div class="avoid">
+        <div class="avoid-item"><span class="x">✕</span><div><b>编码、横向客服</b> —— 门已经关了,价值归模型实验室,种子轮进不去。</div></div>
+        <div class="avoid-item"><span class="x">✕</span><div><b>非结构化灵巧操作(5.3 万亿)</b> —— 全图最大的数字陷阱。硬件时间线卡死 5–15 年,<b>和模型强不强无关</b>。</div></div>
+        <div class="avoid-item"><span class="x">✕</span><div><b>人形机器人本体</b> —— 资本开支 + 估值泡沫,且没有量产车队佐证。</div></div>
+        <div class="avoid-item"><span class="x">✕</span><div><b>翻译</b> —— 替代最真,但门关死了,是"看对了也赚不到"的典型。</div></div>
+      </div>
+
+      <p style="margin-top:1.6em"><strong>这五个格子为什么能过关?它们共用同一套结构。</strong>这也是我以后筛新东西的五道题:</p>
+      <ol class="tests">
+        <li>成功单元能不能数出来 —— 能不能按结果收费?</li>
+        <li>门还开不开 —— 大厂和实验室占住了没有?</li>
+        <li>这行人手本来就够不够 —— 不够,就没有替代反弹的阻力。</li>
+        <li>护城河会不会迁移 —— 是数据/监管/流程,还是只是模型?</li>
+        <li>有没有一条<strong>带日期</strong>的证伪线 —— 我什么时候承认自己错了?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">05</span><h2>收尾</h2><span class="dur">1′</span></div>
+      <div class="landing">这一段的落点:把结论钉在"盯门,不是盯模型"。</div>
+    </div>
+    <div class="say">
+      <p>最后一条结论,也是最反直觉的一条。</p>
+      <p>GPT-6 出来之后,我把这 87 行<strong>全部重跑了一遍</strong>。结果是:<strong>一行评分都没有改。</strong></p>
+      <p>它把电脑操作的可靠性从 20% 提到 31% —— 离生产需要的 80% 到 98% 还差得远;编码打平;<strong>没有解锁任何一个原本被封锁的格子</strong>,因为那些格子卡的是监管、是责任、是硬件、是数据护城河,没有一样是更聪明的模型能解开的。</p>
+      <div class="pull"><b>瓶颈从来不是模型。</b>所以我们要盯的不是"模型什么时候更强",是<b>"门什么时候开"</b>。</div>
+      <p>这也是为什么 v3 最后把整张表接成了一条常驻管线:它会替我盯着那些门 —— 监管松动、第一家像样的公司出现、大厂下场、能力越过某条可靠性线 —— 门一动,就自动报给我,而且每一条都带日期和证伪条件。</p>
+    </div>
+
+    <div class="closer">
+      <h2>讲完要让人记住的三句话</h2>
+      <ul class="three">
+        <li><span class="k">01</span><span>老表的"差额就是机会",在七成的格子里是把同一笔钱数了两遍。</span></li>
+        <li><span class="k">02</span><span>大 ≠ 可投。这张表最大的用处是帮我们<strong>拒绝</strong>看起来很大的东西。</span></li>
+        <li><span class="k">03</span><span>GPT-6 没改动这张表一行 —— 说明该盯的是门,不是模型。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QA -->
+  <section>
+    <div class="shead">
+      <div class="row"><span class="num">Q&amp;A</span><h2>如果被问到</h2><span class="dur">备用</span></div>
+    </div>
+    <div class="qa">
+      <div class="qa-item">
+        <div class="qa-q">"为什么从 205 行砍到 87 行?是不是覆盖变差了?"</div>
+        <div class="qa-a">砍掉的是<b>重复和空行</b>,不是覆盖。而且 v3 专门做了一次完整性审计:按家族层面对着全球约 60 万亿工资盘做了 MECE 验证,九道防重复检查全过。我还<b>主动报了自己最大的短板</b> —— 面对面个人服务有 3–6 万亿命名不足,已经新开了一行补上。</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"28.6 万亿和原来的 9.92 万亿怎么对不上?"</div>
+        <div class="qa-a">口径不同,<b>不要直接比</b>。新表是全球工资盘下的命名赛道、含物理劳动,而且<b>剔除了</b>不能相加的重复切法(如果乱加会算成 44.8 万亿 —— 这正是我们防住的那个错)。</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"催收听起来又小又土,值得放第一吗?"</div>
+        <div class="qa-a">对,<b>它土正是它还开着的原因</b>。性感的那一半(AI SDR)吸走了所有的钱和注意力,也已经崩了。我们要的就是"结果能数、能按成功费收、大厂懒得进"的格子。</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"那 GPT-7 出来会不会推翻这张表?"</div>
+        <div class="qa-a">管线里已经埋了触发器:比如电脑操作可靠性一旦越过 50%,后台自动化那一批会<b>自动重评</b>。但基于 GPT-6 这次的观察,我的基准判断是 —— 下一代模型同样不会解开那些被监管和硬件卡住的格子。</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"这张表多久更新一次?"</div>
+        <div class="qa-a">周扫(只抓状态变化)、月重评(全量打分 + 覆盖审计)、双月深度(重新验证 + 能力刷新)。<b>管线只提案,不自动改冻结的地图</b> —— 任何改动要过人工确认。</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Agent 地图 v3 · Hat-Trick Capital · 2026-09-21 · 配套材料:中文看板、IC 备忘录、8 篇 PhysicalAI 证据包、完整性审计、筛选管线规格。
+  </footer>
+</div>
